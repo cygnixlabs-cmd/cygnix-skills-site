@@ -227,3 +227,4 @@ background-image:linear-gradient(rgba(56,189,248,.07) 1px,transparent 1px),linea
 .plan,.contact>*,details{will-change:transform}
 details p{transform-origin:0 0}
 @media (prefers-reduced-motion:reduce){#bg-fx{display:none}.plan.agency .glow{animation:none}}
+main>section{overflow-x:clip}html{overflow-x:clip}
