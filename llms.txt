@@ -1,0 +1,112 @@
+# Cygnix Labs
+
+> Cygnix Labs builds SEO and AEO (answer engine optimization) tools and fixes websites that are not showing on Google or in AI answers such as ChatGPT, Perplexity and Google AI Overviews. Every job follows three steps: the problem, a proof report from a real tool run, and the fix.
+
+Contact: cygnixlabs@gmail.com · Site: https://skills.cygnixlabs.com/ · Free site check: https://skills.cygnixlabs.com/#contact
+
+## Packages
+
+- Monitor: $29/month. Monthly SEO + AEO audit, indexing and redirect checks, report by email.
+- Growth: $59/month. Monitor plus a monthly prioritised fix plan, content decay and cannibalization checks, 2 briefs a month.
+- Agency: $99/month. 5 client sites with white-label reports and all Monitor + Growth checks.
+- Quick Audit: $79 one-time. Key pages of one site: indexing, meta, schema, AI readiness and a fix list.
+- Full Audit: $199 one-time. Whole-site SEO + AEO audit with redirects, internal links, backlinks and content decay.
+- Fix Sprint: $299 one-time. We fix the top issues from your audit, recheck and resubmit the pages to Google.
+
+## Apify actors (run in the cloud, pay per use)
+
+- [Redirect Chain Checker & Bulk HTTP Status Checker: 301 QA](https://apify.com/cygnix_labs/redirect-checker): Bulk redirect chain checker and HTTP status code checker. Traces every hop (301/302/307/308, meta refresh), flags redirect chains, loops, 404s, soft 404s and noindex targets, and QAs old→new redirect maps after a... Price: $0.0008 per url checked.
+- [Crawled - Currently Not Indexed Fixer (GSC Indexing Diagnosis)](https://apify.com/cygnix_labs/indexing-fix-planner): Why won't Google index my pages? Paste your Search Console not-indexed URLs: per-URL cause (404, noindex vs sitemap, canonical, near-duplicate, thin, JS-empty, orphan, weak links, low-value URL) + fix, in priority... Price: $0.004 per url diagnosed.
+- [Website SEO Audit & Site Audit Crawler: Technical SEO + AEO/GEO](https://apify.com/cygnix_labs/site-seo-aeo-audit): SEO audit + site audit crawler with an AI search readiness (AEO/GEO) score + technical SEO checks. One URL in: each page and the site scored 0-100 for meta tags, broken links, soft 404s, schema, llms.txt,... Price: $0.01 per page audited.
+- [AEO & AI Visibility Audit: LLM SEO, GEO + llms.txt Checker](https://apify.com/cygnix_labs/aeo-readiness-checker): AEO & GEO audit (answer engine optimization, generative engine optimization, LLM SEO): can ChatGPT, Perplexity, Claude and AI Overviews cite your pages? 0-100 AI search visibility score per URL, llms.txt checker,... Price: $0.005 per page audited.
+- [Spam Backlink Checker: Toxic Links Triage & Disavow Decision](https://apify.com/cygnix_labs/spam-backlink-triage): Getting spam backlinks? Paste your Search Console, Semrush or Ahrefs backlink export: one answer (NO / MONITOR / ACT), a verdict per referring domain (OK, IGNORE, WATCH, DISAVOW), negative-SEO spike check, disavow... Price: $0.001 per referring domain triaged.
+- [Internal Links Checker: Orphan Pages & Internal Linking Audit](https://apify.com/cygnix_labs/internal-link-audit): Check your internal links from the sitemap: orphan pages, weak pages, broken internal links, links to redirects, noindex or redirected sitemap URLs, click depth and anchor text, with a fix per page. First 25 pages... Price: $0.002 per page audited.
+- [SEO Change Impact Checker: GSC Before/After Test](https://apify.com/cygnix_labs/seo-change-impact-checker): Did your SEO change work or is it noise? Upload a Google Search Console CSV + change date: matched DOW-adjusted windows, control-group diff-in-diff, placebo noise band, GSC lag guard, verdict REAL WIN / LOSS / NOISE... Price: $0.01 per change analysed.
+- [Hashtag Generator & Finder: Instagram & TikTok Hashtags](https://apify.com/cygnix_labs/hashtag-research-strategy): Hashtag generator, finder and analytics for Instagram hashtags and TikTok hashtags from real posts: tags creators pair with your seed, real post/view counts, broad/mid/niche tiers, paste-ready 5 and 15 tag sets,... Price: $0.03 per seed hashtag report.
+- [Keyword Clustering Tool & Grouper + Content Brief Generator](https://apify.com/cygnix_labs/keyword-clusterer-brief): Keyword clustering & keyword grouping tool: group a keyword list or Ahrefs/Semrush/GSC/Keyword Planner export into topic clusters by shared terms + search intent, build a topical map, get content briefs. 100 keywords... Price: $0.0007 per keyword clustered; $0.01 per content brief.
+- [Best Time to Post: Instagram, TikTok, YouTube & LinkedIn](https://apify.com/cygnix_labs/social-best-time-to-post): Find the best time to post on Instagram, TikTok, YouTube and LinkedIn from real post data or your analytics CSV export: weekday x hour heatmap in your time zone, engagement rate, best format, caption and hashtag fit,... Price: $0.03 per account report.
+- [Brand Facts Checker & Organization Schema Generator (AEO)](https://apify.com/cygnix_labs/brand-facts-checker): Find brand facts your own site contradicts (founding year, customer counts, phone/email, schema vs page, 404 About page, placeholder sameAs) and get Organization JSON-LD + a citable brand-facts page for AI Overviews,... Price: $0.009 per site audited.
+- [YouTube Channel Analyzer: Analytics & Competitor Analysis](https://apify.com/cygnix_labs/youtube-channel-analyzer): YouTube channel analyzer for creators and marketers: subscribers, views, upload cadence, best upload day and hour, outlier videos vs channel median, winning title patterns and topics, engagement rate, Shorts vs... Price: $0.025 per channel report.
+- [Keyword Cannibalization Checker for Google Search Console](https://apify.com/cygnix_labs/keyword-cannibalization-finder): Keyword cannibalization checker for Google Search Console (GSC): paste a query+page export or a Google Sheets/CSV link. Get pages competing for the same keyword, click split, HIGH/MEDIUM/LOW severity and the safe fix... Price: $0.005 per cannibalization issue.
+- [Email Scraper & Contact Details Scraper: Phones, Socials](https://apify.com/cygnix_labs/outreach-contact-finder): Email scraper and contact details scraper for websites. Paste domains or URLs (e.g. Google Maps leads) and get emails, phone numbers (incl. WhatsApp), contact/impressum pages and social links (LinkedIn, X, Instagram,... Price: $0.004 per domain with contacts.
+- [SERP Intent Mapper: Keyword Search Intent Classifier](https://apify.com/cygnix_labs/serp-intent-mapper): Bulk search intent classifier for keyword lists. Labels each keyword informational, commercial, transactional or navigational (+ local, question flags) and names the page type to build. English, Spanish, German,... Price: $0.0005 per keyword classified.
+- [Content Decay Audit - Google Search Console Traffic Drop](https://apify.com/cygnix_labs/content-decay-audit): Content decay audit for Google Search Console: compare Pages exports (CSV, GSC ZIP, Excel or Google Sheets link, any language) and find pages losing traffic. Labels LOST, RANK_SLIP, DECAYING, CTR_DROP, ranked by... Price: $0.001 per page analyzed.
+- [Tech Stack Detector, Pixel Checker & BuiltWith Alternative](https://apify.com/cygnix_labs/website-tech-stack-detector): Tech stack detector, pixel checker and BuiltWith / Wappalyzer alternative for lead lists. Paste domains or emails; get CMS, Shopify, GA4, GTM tags, Meta/TikTok/LinkedIn pixels, tracking IDs, consent, chat, hosting... Price: $0.0015 per domain analyzed.
+
+## Agensi skills for AI agents
+
+- [Spam Backlink Triage: Should I Care or Disavow? (Toxic Links Checker)](https://agensi.io/skills/spam-backlink-triage-should-i-care-or-disavow-toxic-links-checker): Should I Care or Disavow? (Toxic Links Checker) Price: $7.
+- [Indexing Fix Planner: Why Google Won't Index Your Pages (Crawled - Currently Not Indexed)](https://agensi.io/skills/indexing-fix-planner-why-google-won-t-index-your-pages-crawled-currently-not-indexed): Why Google Won't Index Your Pages (Crawled - Currently Not Indexed) Price: $7.
+- [SEO Change Impact Checker: Did It Work or Is It Noise?](https://agensi.io/skills/seo-change-impact-checker-did-it-work-or-is-it-noise): Did It Work or Is It Noise? Price: $7.
+- [Brand Facts Page Builder: The About Page AI Overviews Cite](https://agensi.io/skills/brand-facts-page-builder-the-about-page-ai-overviews-cite): The About Page AI Overviews Cite Price: $7.
+- [AI Search Visibility Pro: GEO/AEO Audit + AI Citation SOV](https://agensi.io/skills/ai-search-visibility-pro-geo-aeo-audit-ai-citation-sov): GEO/AEO Audit + AI Citation SOV Price: $39.
+- [Google Search Console SEO Bundle: 7 Growth Skills](https://agensi.io/skills/google-search-console-seo-bundle-7-growth-skills): 7 Growth Skills Price: $29.
+- [GSC History Warehouse: Keep Data Past 16 Months](https://agensi.io/skills/gsc-history-warehouse-keep-data-past-16-months): Keep Data Past 16 Months Price: $7.
+- [SEO Plan Pre-Mortem: Grade Any SEO/AEO Plan Out of 100](https://agensi.io/skills/seo-plan-pre-mortem-grade-any-seo-aeo-plan-out-of-100): Grade Any SEO/AEO Plan Out of 100 Price: $7.
+- [Tech-to-Plain-English Rewriter: PM, Support & Exec](https://agensi.io/skills/tech-to-plain-english-rewriter-pm-support-exec): PM, Support & Exec Price: $5.
+- [Statistics Hub Page Builder: Earn Backlinks & AI Citations](https://agensi.io/skills/statistics-hub-page-builder-earn-backlinks-ai-citations): Earn Backlinks & AI Citations Price: $7.
+- [TikTok & Instagram Carousel Builder: Hooks to PNG Slides](https://agensi.io/skills/tiktok-instagram-carousel-builder-hooks-to-png-slides): Hooks to PNG Slides Price: $7.
+- [Hreflang Checker & Fixer: Return Tags, Codes, x-default](https://agensi.io/skills/hreflang-checker-fixer-return-tags-codes-x-default): Return Tags, Codes, x-default Price: $6.
+- [Skill Seller Kit: Turn a Workflow into a SKILL.md That Sells](https://agensi.io/skills/skill-seller-kit-turn-a-workflow-into-a-skill-md-that-sells): Turn a Workflow into a SKILL.md That Sells Price: $7.
+- [Local AI Visibility Audit: Does ChatGPT Recommend You?](https://agensi.io/skills/local-ai-visibility-audit-does-chatgpt-recommend-you): Does ChatGPT Recommend You? Price: $14.
+- [Search Console Quick Wins: Striking-Distance + CTR Fixes](https://agensi.io/skills/search-console-quick-wins-striking-distance-ctr-fixes): Striking-Distance + CTR Fixes Price: $6.
+- [AI Citation Share-of-Voice Panel: AI Visibility Audit](https://agensi.io/skills/ai-citation-share-of-voice-panel-ai-visibility-audit): AI Visibility Audit Price: $17.
+- [AI Search Visibility Suite: 0-100 GEO Score + Report](https://agensi.io/skills/ai-search-visibility-suite-0-100-geo-score-report): 0-100 GEO Score + Report Price: $22.
+- [Social Share Preview Audit: OG + Twitter Cards](https://agensi.io/skills/social-share-preview-audit-og-twitter-cards): OG + Twitter Cards Price: $6.
+- [Citation Freshness Audit: dateModified + Sitemap](https://agensi.io/skills/citation-freshness-audit-datemodified-sitemap): dateModified + Sitemap Price: $7.
+- [Ship Schema That Wins Rich Results: JSON-LD Audit](https://agensi.io/skills/ship-schema-that-wins-rich-results-json-ld-audit): JSON-LD Audit Price: $7.
+- [Ship llms.txt + Unlock AI Crawlers: Access Fix Pack](https://agensi.io/skills/ship-llms-txt-unlock-ai-crawlers-access-fix-pack): Access Fix Pack Price: $7.
+- [Catch Fake Links Before You Publish: LLM Hallucination Check](https://agensi.io/skills/catch-fake-links-before-you-publish-llm-hallucination-check): LLM Hallucination Check Price: $7.
+- [Site Migration QA: Redirects, Parity + Traffic Alerts](https://agensi.io/skills/site-migration-qa-redirects-parity-traffic-alerts): Redirects, Parity + Traffic Alerts Price: $8.
+- [YouTube SEO Growth: Title CTR, Chapters + Publish QA](https://agensi.io/skills/youtube-seo-growth-title-ctr-chapters-publish-qa): Title CTR, Chapters + Publish QA Price: $4.
+- [Win Featured Snippets: Ownership Map + PAA Bank](https://agensi.io/skills/win-featured-snippets-ownership-map-paa-bank): Ownership Map + PAA Bank Price: $7.
+- [Win Featured Snippets + People Also Ask: SERP Win Plan](https://agensi.io/skills/win-featured-snippets-people-also-ask-serp-win-plan): SERP Win Plan Price: $9.
+- [Get More YouTube Clicks: Keyword, Title + Chapter Audit](https://agensi.io/skills/get-more-youtube-clicks-keyword-title-chapter-audit): Keyword, Title + Chapter Audit Price: $6.
+- [Migrate Sites Without Losing SEO: Redirect + Parity Audit](https://agensi.io/skills/migrate-sites-without-losing-seo-redirect-parity-audit): Redirect + Parity Audit Price: $9.
+- [Plan Programmatic SEO Pages Without Thin Content](https://agensi.io/skills/plan-programmatic-seo-pages-without-thin-content): Plan Programmatic SEO Pages Without Thin Content Price: $8.
+- [Find Orphan Pages and Fix Your Internal Linking](https://agensi.io/skills/find-orphan-pages-and-fix-your-internal-linking): Find Orphan Pages and Fix Your Internal Linking Price: $7.
+- [Plan 301 Redirects for a Site Migration Without Losing SEO](https://agensi.io/skills/plan-301-redirects-for-a-site-migration-without-losing-seo): Plan 301 Redirects for a Site Migration Without Losing SEO Price: $6.
+- [Featured Snippet Optimizer — Win Position Zero](https://agensi.io/skills/featured-snippet-optimizer-win-position-zero): Featured Snippet Optimizer — Win Position Zero Price: $5.
+- [Fix Keyword Cannibalization Using Google Search Console](https://agensi.io/skills/fix-keyword-cannibalization-using-google-search-console): Fix Keyword Cannibalization Using Google Search Console Price: $6.
+- [Find Decaying Pages: GSC Triage + Content Refresh Plan](https://agensi.io/skills/find-decaying-pages-gsc-triage-content-refresh-plan): GSC Triage + Content Refresh Plan Price: $8.
+- [Local SEO Keyword Pack — Service × City Matrix + Page Plan](https://agensi.io/skills/local-seo-keyword-pack-service-city-matrix-page-plan): Local SEO Keyword Pack — Service × City Matrix + Page Plan Price: $6.
+- [Map Niche into Pillars Clusters and Internal Links](https://agensi.io/skills/map-niche-into-pillars-clusters-and-internal-links): Map Niche into Pillars Clusters and Internal Links Price: $8.
+- [SERP Intent Mapper — Keyword → Page Type Match](https://agensi.io/skills/serp-intent-mapper-keyword-page-type-match): SERP Intent Mapper — Keyword → Page Type Match Price: $5.
+- [Keyword Gap Analysis — Competitor Gaps + Priority Plan](https://agensi.io/skills/keyword-gap-analysis-competitor-gaps-priority-plan): Keyword Gap Analysis — Competitor Gaps + Priority Plan Price: $7.
+- [Turn Any Brief into a Designer-Ready Infographic Plan](https://agensi.io/skills/turn-any-brief-into-a-designer-ready-infographic-plan): Turn Any Brief into a Designer-Ready Infographic Plan Price: $5.
+- [Client Reports That Get Renewed: KPI → Exec Summary](https://agensi.io/skills/client-reports-that-get-renewed-kpi-exec-summary): KPI → Exec Summary Price: $4.
+- [Turn Any Offer into Landing Page Copy That Converts](https://agensi.io/skills/turn-any-offer-into-landing-page-copy-that-converts): Turn Any Offer into Landing Page Copy That Converts Price: $5.
+- [SEO Meta Tags Generator — Titles, Descriptions + Schema](https://agensi.io/skills/seo-meta-tags-generator-titles-descriptions-schema): SEO Meta Tags Generator — Titles, Descriptions + Schema Price: $5.
+- [Local SEO Audit: GBP + NAP Fix Plan for Small Business](https://agensi.io/skills/local-seo-audit-gbp-nap-fix-plan-for-small-business): GBP + NAP Fix Plan for Small Business Price: $5.
+- [UAT Test Plan for Chatbots, Shopify + Workflows: Go/No-Go](https://agensi.io/skills/uat-test-plan-for-chatbots-shopify-workflows-go-no-go): Go/No-Go Price: $4.
+- [Vague Ticket → Precise Coding Prompt: Ship in One Pass](https://agensi.io/skills/vague-ticket-precise-coding-prompt-ship-in-one-pass): Ship in One Pass Price: $4.
+- [PR Description Writer — Summary, Changes + Test Plan](https://agensi.io/skills/pr-description-writer-summary-changes-test-plan): PR Description Writer — Summary, Changes + Test Plan Price: $4.
+- [Elementor Rebuild Brief: Section Map + Widget Stack](https://agensi.io/skills/elementor-rebuild-brief-section-map-widget-stack): Section Map + Widget Stack Price: $7.
+- [Write Commits Reviewers Approve: Conventional + Why](https://agensi.io/skills/write-commits-reviewers-approve-conventional-why): Conventional + Why Price: $3.
+- [Website Project Scope: MVP Checklist + Risk Map](https://agensi.io/skills/website-project-scope-mvp-checklist-risk-map): MVP Checklist + Risk Map Price: $6.
+- [App MVP Scope Audit: Must-Haves, Risks + First Build Slice](https://agensi.io/skills/app-mvp-scope-audit-must-haves-risks-first-build-slice): Must-Haves, Risks + First Build Slice Price: $4.
+- [Find & Fix WhatsApp Chatbot Failures: P0–P2 Audit](https://agensi.io/skills/find-fix-whatsapp-chatbot-failures-p0-p2-audit): P0–P2 Audit Price: $4.
+- [Find Why Shopify Visitors Don't Buy: CRO Audit + Fix List](https://agensi.io/skills/find-why-shopify-visitors-don-t-buy-cro-audit-fix-list): CRO Audit + Fix List Price: $7.
+- [README Generator: README.md from Your Real Project Files](https://agensi.io/skills/readme-generator-readme-md-from-your-real-project-files): README.md from Your Real Project Files Price: $4.
+- [Find the Commit That Broke Your Code from Git History](https://agensi.io/skills/find-the-commit-that-broke-your-code-from-git-history): Find the Commit That Broke Your Code from Git History Price: $4.
+- [Code Reviewer — Severity-Rated PR Review + Fix Plan](https://agensi.io/skills/code-reviewer-severity-rated-pr-review-fix-plan): Code Reviewer — Severity-Rated PR Review + Fix Plan Price: $3.
+- [GTM Market Check: ICP, Positioning Risks + Channel Tests](https://agensi.io/skills/gtm-market-check-icp-positioning-risks-channel-tests): ICP, Positioning Risks + Channel Tests Price: $7.
+- [Code Review Lite — Severity Checklist](https://agensi.io/skills/code-review-lite-severity-checklist): Code Review Lite — Severity Checklist Price: Free.
+- [SEO Content Brief — Writer-Ready Outline](https://agensi.io/skills/seo-content-brief-writer-ready-outline): SEO Content Brief — Writer-Ready Outline Price: Free.
+- [Humanize AI Writing: Remove AI Tells, Keep Your Meaning](https://agensi.io/skills/humanize-ai-writing-remove-ai-tells-keep-your-meaning): Remove AI Tells, Keep Your Meaning Price: $5.
+- [Turn Any Task into a Reusable Prompt Template](https://agensi.io/skills/turn-any-task-into-a-reusable-prompt-template): Turn Any Task into a Reusable Prompt Template Price: $5.
+- [Customer Interviews → Themes, Jobs + Next Questions](https://agensi.io/skills/customer-interviews-themes-jobs-next-questions): Customer Interviews → Themes, Jobs + Next Questions Price: $7.
+- [Price With Confidence — Tiers, Packaging + Test Plan](https://agensi.io/skills/price-with-confidence-tiers-packaging-test-plan): Price With Confidence — Tiers, Packaging + Test Plan Price: $9.
+- [Competitor Feature Gap Map: Find 3 Features You Can Win On](https://agensi.io/skills/competitor-feature-gap-map-find-3-features-you-can-win-on): Find 3 Features You Can Win On Price: $5.
+- [AEO Audit — Get Cited in ChatGPT + AI Overviews](https://agensi.io/skills/aeo-audit-get-cited-in-chatgpt-ai-overviews): AEO Audit — Get Cited in ChatGPT + AI Overviews Price: $7.
+- [Chatbot Script Builder — Intents to MVP Conversation Flow](https://agensi.io/skills/chatbot-script-builder-intents-to-mvp-conversation-flow): Chatbot Script Builder — Intents to MVP Conversation Flow Price: $4.
+- [Keyword Clusters + Intent Map: No Paid SEO Tool Needed](https://agensi.io/skills/keyword-clusters-intent-map-no-paid-seo-tool-needed): No Paid SEO Tool Needed Price: $7.
+- [Landing Page Critique: P0–P2 Conversion Fix List](https://agensi.io/skills/landing-page-critique-p0-p2-conversion-fix-list): P0–P2 Conversion Fix List Price: $5.
+- [Go-To-Market Plan — One-Pager + 30-Day Experiments](https://agensi.io/skills/go-to-market-plan-one-pager-30-day-experiments): Go-To-Market Plan — One-Pager + 30-Day Experiments Price: $5.
+- [Make Faster Business Decisions — Decision Memo Pack](https://agensi.io/skills/make-faster-business-decisions-decision-memo-pack): Make Faster Business Decisions — Decision Memo Pack Price: $7.
+- [Source-Backed Research Brief: Facts, Citations + Angles](https://agensi.io/skills/source-backed-research-brief-facts-citations-angles): Facts, Citations + Angles Price: $4.
+
+## Optional
+
+- [Listings feed (JSON)](https://skills.cygnixlabs.com/feed/cygnix-listings.json)
+- [Gumroad packs](https://cygnixlabs.gumroad.com/)
