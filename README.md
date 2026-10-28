@@ -30,3 +30,10 @@ Both the contact form and "Send this to the Cygnix team" in the chat post to For
 - No fake testimonials or stats.
 - Mock screens are labelled EXAMPLE or SAMPLE LAYOUT.
 - The chat says it is an automated guide, and the team replies by email.
+
+## Motion layer (`assets/js/motion.js`)
+- GSAP 3.12.5, ScrollTrigger and Lenis 1.1.20 are vendored in `assets/vendor/`. Motion only animates transform and opacity.
+- An inline head script sets `html.motion`, which turns motion on unless reduced motion is requested. It also sets `html.motion-lg` on desktops (981px or wider) with 4 GB of memory or more. The script sets these classes before first paint, so the layout never shifts.
+- On `motion-lg`, the site gets smooth scroll, the pinned How it works sequence, the pinned Who it's for carousel, the particle background and the section depth exits.
+- Phones get lighter, one-shot reveals.
+- With reduced motion turned on, the page is static.
