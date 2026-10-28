@@ -26,10 +26,12 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/jakarta.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="alternate" type="text/plain" title="llms.txt" href="llms.txt">
+<script>(function(){var d=document.documentElement,r=matchMedia('(prefers-reduced-motion: reduce)').matches;if(!r){d.classList.add('motion');if(matchMedia('(min-width: 981px)').matches&&!(navigator.deviceMemory&&navigator.deviceMemory<4))d.classList.add('motion-lg');}})();</script>
 <link rel="stylesheet" href="assets/css/site.css?v={{V}}">
 <script type="application/ld+json">{{JSONLD}}</script>
 </head>
 <body>
+<div class="bg-grid" aria-hidden="true"></div><canvas id="bg-fx" aria-hidden="true"></canvas>
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav"><div class="wrap">
  <a class="logo" href="#top" aria-label="Cygnix Labs home"><svg viewBox="0 0 32 32" aria-hidden="true"><g stroke="#38BDF8" stroke-width="1.6"><path d="M16 16 6 7M16 16l10-9M16 16 6 25M16 16l10 9M16 16V4M16 16v12"/></g><circle cx="16" cy="16" r="4.2" fill="#38BDF8"/><g fill="#7DD3FC"><circle cx="6" cy="7" r="2"/><circle cx="26" cy="7" r="2"/><circle cx="6" cy="25" r="2"/><circle cx="26" cy="25" r="2"/><circle cx="16" cy="4" r="1.6"/><circle cx="16" cy="28" r="1.6"/></g></svg>CYGNIX <b>LABS</b></a>
@@ -66,28 +68,30 @@
  <p class="eyebrow">How it works</p>
  <h2>Problem. Proof. Fix.</h2>
  <p class="sub">Every job follows the same three steps: what happened to your site, the evidence from a real tool run, and exactly how we fix it.</p>
+ <div class="steps-progress" aria-hidden="true"><span></span></div>
  <div class="steps">
-  <article class="step glass rv">
+  <article class="step glass rv"><span class="halo" aria-hidden="true"></span>
    <h3><span class="num">1</span>The problem</h3>
    <p>Your pages are live, but Google isn't showing them, rankings slip, or AI answers name your competitors instead of you.</p>
    <div class="mock"><div class="mh"><span>SEARCH CONSOLE · PAGES</span><span class="tag">EXAMPLE</span></div>
-    <div class="row"><code>/services/dental-implants</code><span class="st r">Not indexed</span></div>
-    <div class="row"><code>/offers/summer-spa</code><span class="st a">Discovered</span></div>
-    <div class="row"><code>/old-pricing</code><span class="st r">404</span></div>
-    <div class="row"><code>/blog/whitening-guide</code><span class="st a">Canonical</span></div>
+    <div class="row prob"><code>/services/dental-implants</code><span class="sw"><span class="st r">Not indexed</span><span class="st g">✓ Indexed</span></span></div>
+    <div class="row prob"><code>/offers/summer-spa</code><span class="sw"><span class="st a">Discovered</span><span class="st g">✓ Indexed</span></span></div>
+    <div class="row prob"><code>/old-pricing</code><span class="sw"><span class="st r">404</span><span class="st g">✓ 301 → /pricing</span></span></div>
+    <div class="row prob"><code>/blog/whitening-guide</code><span class="sw"><span class="st a">Canonical</span><span class="st g">✓ Indexed</span></span></div>
    </div>
   </article>
-  <article class="step glass rv">
+  <article class="step glass rv"><span class="halo" aria-hidden="true"></span>
    <h3><span class="num">2</span>The proof</h3>
    <p>We run the matching Cygnix tool on your real URLs and data. You get the cause of each problem, ranked by priority.</p>
    <div class="mock"><div class="mh"><span>INDEXING FIX PLANNER · REPORT</span><span class="tag">SAMPLE LAYOUT</span></div>
-    <div class="row"><code>/old-pricing</code><span class="st r">Returns 404</span></div>
-    <div class="row"><code>/blog/whitening-guide</code><span class="st a">Canonical → /blog</span></div>
-    <div class="row"><code>/services/dental-implants</code><span class="st a">Orphan page</span></div>
-    <div class="row"><code>Priority</code><span class="st c">3 fixes · high first</span></div>
+    <div class="row rep"><code class="type">/old-pricing</code><span class="st r type">Returns 404</span></div>
+    <div class="row rep"><code class="type">/blog/whitening-guide</code><span class="st a type">Canonical → /blog</span></div>
+    <div class="row rep"><code class="type">/services/dental-implants</code><span class="st a type">Orphan page</span></div>
+    <div class="row rep"><code class="type">Priority</code><span class="st c type">3 fixes · high first</span></div>
+    <div class="scanbar" aria-hidden="true"></div>
    </div>
   </article>
-  <article class="step glass rv">
+  <article class="step glass rv"><span class="halo" aria-hidden="true"></span>
    <h3><span class="num">3</span>The fix</h3>
    <p>Follow the fix list yourself, or book a Fix Sprint and we make the changes and resubmit the pages to Google.</p>
    <div class="mock"><div class="mh"><span>FIX PLAN</span><span class="st g">READY</span></div>
@@ -139,9 +143,9 @@
   <div class="plan glass hot rv"><span class="ribbon">BEST VALUE</span><h3>Growth</h3><div class="amt">$59<span>/month</span></div><p class="for">One site that wants more traffic.</p>
    <ul><li>Everything in Monitor</li><li>Monthly fix plan, highest impact first</li><li>Content decay and cannibalization checks</li><li>2 keyword or content briefs a month</li></ul>
    <a class="btn btn-p" href="#contact" data-package="Growth — $59/mo">Get started</a></div>
-  <div class="plan glass rv"><h3>Agency</h3><div class="amt">$99<span>/month</span></div><p class="for">Agencies serving many clients.</p>
+  <div class="plan glass rv agency"><span class="ribbon">BEST FOR AGENCIES</span><span class="glow" aria-hidden="true"></span><h3>Agency</h3><div class="amt">$99<span>/month</span></div><p class="for">Agencies serving many clients.</p>
    <ul><li>5 client sites included</li><li>White-label reports with your brand</li><li>Monitor and Growth checks on every site</li><li>Priority email support</li></ul>
-   <a class="btn btn-g" href="#contact" data-package="Agency — $99/mo (5 white-label sites)">Get started</a></div>
+   <a class="btn btn-p" href="#contact" data-package="Agency — $99/mo (5 white-label sites)">Get started</a></div>
  </div>
  <div class="oneoff">
   <div class="plan glass rv"><h3>Quick Audit</h3><div class="amt">$79<span> one-time</span></div><p class="for">Key pages of one site: indexing, meta, schema and AI readiness, with a fix list.</p><a class="btn btn-g" href="#contact" data-package="Quick Audit — $79">Get started</a></div>
@@ -200,10 +204,14 @@
 <button class="chat-fab" id="chat-fab" type="button" aria-controls="chat" aria-expanded="false"><img src="assets/img/eagle-360.webp" alt="" width="38" height="38" loading="lazy"><span>Talk to us</span></button>
 <div class="chat" id="chat" role="dialog" aria-label="Talk to us: Cygnix guide">
  <div class="chat-h"><img src="assets/img/eagle-360.webp" alt="" width="40" height="40" loading="lazy"><div><b>Cygnix guide</b><small>Automated guide · the team replies by email</small></div><button class="chat-x" type="button" aria-label="Close chat">×</button></div>
- <div class="chat-b"></div>
+ <div class="chat-b" data-lenis-prevent></div>
  <form class="chat-f"><input type="text" placeholder="Describe your problem…" aria-label="Describe your problem" maxlength="300"><button class="btn btn-p btn-sm" type="submit">Send</button></form>
  <div class="chat-note">Not a live chat. Use “Send this to the Cygnix team” and we reply by email.</div>
 </div>
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/vendor/lenis.min.js" defer></script>
 <script src="assets/js/main.js?v={{V}}" defer></script>
+<script src="assets/js/motion.js?v={{V}}" defer></script>
 </body>
 </html>
