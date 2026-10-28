@@ -76,7 +76,7 @@ jsonld = json.dumps({"@context": "https://schema.org", "@graph": [org, website, 
 now = datetime.date.today().isoformat()
 out = (faq_src.replace("{{SITE}}", SITE).replace("{{JSONLD}}", jsonld).replace("{{TOOL_CARDS}}", "".join(card(i) for i in actors))
        .replace("{{UPDATED}}", f'{feed.get("updated", now)} · {len(items)} live tools and skills').replace("{{YEAR}}", str(datetime.date.today().year))
-       .replace("{{V}}", now.replace("-", "")))
+       .replace("{{V}}", datetime.datetime.now().strftime("%Y%m%d%H%M")))
 (ROOT / "index.html").write_text(out)
 
 L = ["# Cygnix Labs", "", "> Cygnix Labs builds SEO and AEO (answer engine optimization) tools and fixes websites that are not showing on Google or in AI answers such as ChatGPT, Perplexity and Google AI Overviews. Every job follows three steps: the problem, a proof report from a real tool run, and the fix.", "",
