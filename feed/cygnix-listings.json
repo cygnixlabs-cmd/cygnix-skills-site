@@ -1,0 +1,903 @@
+{
+ "publisher": "Cygnix Labs",
+ "contact": "info@cygnixlabs.com",
+ "updated": "2026-10-28",
+ "count": 89,
+ "counts": {
+  "skill": 69,
+  "bundle": 1,
+  "apify_actor": 19
+ },
+ "items": [
+  {
+   "type": "skill",
+   "title": "Spam Backlink Triage: Should I Care or Disavow? (Toxic Links Checker)",
+   "slug": "spam-backlink-triage-should-i-care-or-disavow-toxic-links-checker",
+   "price": "$7",
+   "url": "https://agensi.io/skills/spam-backlink-triage-should-i-care-or-disavow-toxic-links-checker",
+   "short_description": "Should I Care or Disavow? (Toxic Links Checker)",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Indexing Fix Planner: Why Google Won't Index Your Pages (Crawled - Currently Not Indexed)",
+   "slug": "indexing-fix-planner-why-google-won-t-index-your-pages-crawled-currently-not-indexed",
+   "price": "$7",
+   "url": "https://agensi.io/skills/indexing-fix-planner-why-google-won-t-index-your-pages-crawled-currently-not-indexed",
+   "short_description": "Why Google Won't Index Your Pages (Crawled - Currently Not Indexed)",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "SEO Change Impact Checker: Did It Work or Is It Noise?",
+   "slug": "seo-change-impact-checker-did-it-work-or-is-it-noise",
+   "price": "$7",
+   "url": "https://agensi.io/skills/seo-change-impact-checker-did-it-work-or-is-it-noise",
+   "short_description": "Did It Work or Is It Noise?",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Brand Facts Page Builder: The About Page AI Overviews Cite",
+   "slug": "brand-facts-page-builder-the-about-page-ai-overviews-cite",
+   "price": "$7",
+   "url": "https://agensi.io/skills/brand-facts-page-builder-the-about-page-ai-overviews-cite",
+   "short_description": "The About Page AI Overviews Cite",
+   "category": "AEO / AI search",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "AI Search Visibility Pro: GEO/AEO Audit + AI Citation SOV",
+   "slug": "ai-search-visibility-pro-geo-aeo-audit-ai-citation-sov",
+   "price": "$39",
+   "url": "https://agensi.io/skills/ai-search-visibility-pro-geo-aeo-audit-ai-citation-sov",
+   "short_description": "GEO/AEO Audit + AI Citation SOV",
+   "category": "AEO / AI search",
+   "platform": "Agensi"
+  },
+  {
+   "type": "bundle",
+   "title": "Google Search Console SEO Bundle: 7 Growth Skills",
+   "slug": "google-search-console-seo-bundle-7-growth-skills",
+   "price": "$29",
+   "url": "https://agensi.io/skills/google-search-console-seo-bundle-7-growth-skills",
+   "short_description": "7 Growth Skills",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "GSC History Warehouse: Keep Data Past 16 Months",
+   "slug": "gsc-history-warehouse-keep-data-past-16-months",
+   "price": "$7",
+   "url": "https://agensi.io/skills/gsc-history-warehouse-keep-data-past-16-months",
+   "short_description": "Keep Data Past 16 Months",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "SEO Plan Pre-Mortem: Grade Any SEO/AEO Plan Out of 100",
+   "slug": "seo-plan-pre-mortem-grade-any-seo-aeo-plan-out-of-100",
+   "price": "$7",
+   "url": "https://agensi.io/skills/seo-plan-pre-mortem-grade-any-seo-aeo-plan-out-of-100",
+   "short_description": "Grade Any SEO/AEO Plan Out of 100",
+   "category": "AEO / AI search",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Tech-to-Plain-English Rewriter: PM, Support & Exec",
+   "slug": "tech-to-plain-english-rewriter-pm-support-exec",
+   "price": "$5",
+   "url": "https://agensi.io/skills/tech-to-plain-english-rewriter-pm-support-exec",
+   "short_description": "PM, Support & Exec",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Statistics Hub Page Builder: Earn Backlinks & AI Citations",
+   "slug": "statistics-hub-page-builder-earn-backlinks-ai-citations",
+   "price": "$7",
+   "url": "https://agensi.io/skills/statistics-hub-page-builder-earn-backlinks-ai-citations",
+   "short_description": "Earn Backlinks & AI Citations",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "TikTok & Instagram Carousel Builder: Hooks to PNG Slides",
+   "slug": "tiktok-instagram-carousel-builder-hooks-to-png-slides",
+   "price": "$7",
+   "url": "https://agensi.io/skills/tiktok-instagram-carousel-builder-hooks-to-png-slides",
+   "short_description": "Hooks to PNG Slides",
+   "category": "Social media",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Hreflang Checker & Fixer: Return Tags, Codes, x-default",
+   "slug": "hreflang-checker-fixer-return-tags-codes-x-default",
+   "price": "$6",
+   "url": "https://agensi.io/skills/hreflang-checker-fixer-return-tags-codes-x-default",
+   "short_description": "Return Tags, Codes, x-default",
+   "category": "Developer",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Skill Seller Kit: Turn a Workflow into a SKILL.md That Sells",
+   "slug": "skill-seller-kit-turn-a-workflow-into-a-skill-md-that-sells",
+   "price": "$7",
+   "url": "https://agensi.io/skills/skill-seller-kit-turn-a-workflow-into-a-skill-md-that-sells",
+   "short_description": "Turn a Workflow into a SKILL.md That Sells",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Local AI Visibility Audit: Does ChatGPT Recommend You?",
+   "slug": "local-ai-visibility-audit-does-chatgpt-recommend-you",
+   "price": "$14",
+   "url": "https://agensi.io/skills/local-ai-visibility-audit-does-chatgpt-recommend-you",
+   "short_description": "Does ChatGPT Recommend You?",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Search Console Quick Wins: Striking-Distance + CTR Fixes",
+   "slug": "search-console-quick-wins-striking-distance-ctr-fixes",
+   "price": "$6",
+   "url": "https://agensi.io/skills/search-console-quick-wins-striking-distance-ctr-fixes",
+   "short_description": "Striking-Distance + CTR Fixes",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "AI Citation Share-of-Voice Panel: AI Visibility Audit",
+   "slug": "ai-citation-share-of-voice-panel-ai-visibility-audit",
+   "price": "$17",
+   "url": "https://agensi.io/skills/ai-citation-share-of-voice-panel-ai-visibility-audit",
+   "short_description": "AI Visibility Audit",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "AI Search Visibility Suite: 0-100 GEO Score + Report",
+   "slug": "ai-search-visibility-suite-0-100-geo-score-report",
+   "price": "$22",
+   "url": "https://agensi.io/skills/ai-search-visibility-suite-0-100-geo-score-report",
+   "short_description": "0-100 GEO Score + Report",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Social Share Preview Audit: OG + Twitter Cards",
+   "slug": "social-share-preview-audit-og-twitter-cards",
+   "price": "$6",
+   "url": "https://agensi.io/skills/social-share-preview-audit-og-twitter-cards",
+   "short_description": "OG + Twitter Cards",
+   "category": "Social media",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Citation Freshness Audit: dateModified + Sitemap",
+   "slug": "citation-freshness-audit-datemodified-sitemap",
+   "price": "$7",
+   "url": "https://agensi.io/skills/citation-freshness-audit-datemodified-sitemap",
+   "short_description": "dateModified + Sitemap",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Ship Schema That Wins Rich Results: JSON-LD Audit",
+   "slug": "ship-schema-that-wins-rich-results-json-ld-audit",
+   "price": "$7",
+   "url": "https://agensi.io/skills/ship-schema-that-wins-rich-results-json-ld-audit",
+   "short_description": "JSON-LD Audit",
+   "category": "AEO / AI search",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Ship llms.txt + Unlock AI Crawlers: Access Fix Pack",
+   "slug": "ship-llms-txt-unlock-ai-crawlers-access-fix-pack",
+   "price": "$7",
+   "url": "https://agensi.io/skills/ship-llms-txt-unlock-ai-crawlers-access-fix-pack",
+   "short_description": "Access Fix Pack",
+   "category": "AEO / AI search",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Catch Fake Links Before You Publish: LLM Hallucination Check",
+   "slug": "catch-fake-links-before-you-publish-llm-hallucination-check",
+   "price": "$7",
+   "url": "https://agensi.io/skills/catch-fake-links-before-you-publish-llm-hallucination-check",
+   "short_description": "LLM Hallucination Check",
+   "category": "AEO / AI search",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Site Migration QA: Redirects, Parity + Traffic Alerts",
+   "slug": "site-migration-qa-redirects-parity-traffic-alerts",
+   "price": "$8",
+   "url": "https://agensi.io/skills/site-migration-qa-redirects-parity-traffic-alerts",
+   "short_description": "Redirects, Parity + Traffic Alerts",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "YouTube SEO Growth: Title CTR, Chapters + Publish QA",
+   "slug": "youtube-seo-growth-title-ctr-chapters-publish-qa",
+   "price": "$4",
+   "url": "https://agensi.io/skills/youtube-seo-growth-title-ctr-chapters-publish-qa",
+   "short_description": "Title CTR, Chapters + Publish QA",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Win Featured Snippets: Ownership Map + PAA Bank",
+   "slug": "win-featured-snippets-ownership-map-paa-bank",
+   "price": "$7",
+   "url": "https://agensi.io/skills/win-featured-snippets-ownership-map-paa-bank",
+   "short_description": "Ownership Map + PAA Bank",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Win Featured Snippets + People Also Ask: SERP Win Plan",
+   "slug": "win-featured-snippets-people-also-ask-serp-win-plan",
+   "price": "$9",
+   "url": "https://agensi.io/skills/win-featured-snippets-people-also-ask-serp-win-plan",
+   "short_description": "SERP Win Plan",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Get More YouTube Clicks: Keyword, Title + Chapter Audit",
+   "slug": "get-more-youtube-clicks-keyword-title-chapter-audit",
+   "price": "$6",
+   "url": "https://agensi.io/skills/get-more-youtube-clicks-keyword-title-chapter-audit",
+   "short_description": "Keyword, Title + Chapter Audit",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Migrate Sites Without Losing SEO: Redirect + Parity Audit",
+   "slug": "migrate-sites-without-losing-seo-redirect-parity-audit",
+   "price": "$9",
+   "url": "https://agensi.io/skills/migrate-sites-without-losing-seo-redirect-parity-audit",
+   "short_description": "Redirect + Parity Audit",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Plan Programmatic SEO Pages Without Thin Content",
+   "slug": "plan-programmatic-seo-pages-without-thin-content",
+   "price": "$8",
+   "url": "https://agensi.io/skills/plan-programmatic-seo-pages-without-thin-content",
+   "short_description": "Plan Programmatic SEO Pages Without Thin Content",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Find Orphan Pages and Fix Your Internal Linking",
+   "slug": "find-orphan-pages-and-fix-your-internal-linking",
+   "price": "$7",
+   "url": "https://agensi.io/skills/find-orphan-pages-and-fix-your-internal-linking",
+   "short_description": "Find Orphan Pages and Fix Your Internal Linking",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Plan 301 Redirects for a Site Migration Without Losing SEO",
+   "slug": "plan-301-redirects-for-a-site-migration-without-losing-seo",
+   "price": "$6",
+   "url": "https://agensi.io/skills/plan-301-redirects-for-a-site-migration-without-losing-seo",
+   "short_description": "Plan 301 Redirects for a Site Migration Without Losing SEO",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Featured Snippet Optimizer — Win Position Zero",
+   "slug": "featured-snippet-optimizer-win-position-zero",
+   "price": "$5",
+   "url": "https://agensi.io/skills/featured-snippet-optimizer-win-position-zero",
+   "short_description": "Featured Snippet Optimizer — Win Position Zero",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Fix Keyword Cannibalization Using Google Search Console",
+   "slug": "fix-keyword-cannibalization-using-google-search-console",
+   "price": "$6",
+   "url": "https://agensi.io/skills/fix-keyword-cannibalization-using-google-search-console",
+   "short_description": "Fix Keyword Cannibalization Using Google Search Console",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Find Decaying Pages: GSC Triage + Content Refresh Plan",
+   "slug": "find-decaying-pages-gsc-triage-content-refresh-plan",
+   "price": "$8",
+   "url": "https://agensi.io/skills/find-decaying-pages-gsc-triage-content-refresh-plan",
+   "short_description": "GSC Triage + Content Refresh Plan",
+   "category": "Content",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Local SEO Keyword Pack — Service × City Matrix + Page Plan",
+   "slug": "local-seo-keyword-pack-service-city-matrix-page-plan",
+   "price": "$6",
+   "url": "https://agensi.io/skills/local-seo-keyword-pack-service-city-matrix-page-plan",
+   "short_description": "Local SEO Keyword Pack — Service × City Matrix + Page Plan",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Map Niche into Pillars Clusters and Internal Links",
+   "slug": "map-niche-into-pillars-clusters-and-internal-links",
+   "price": "$8",
+   "url": "https://agensi.io/skills/map-niche-into-pillars-clusters-and-internal-links",
+   "short_description": "Map Niche into Pillars Clusters and Internal Links",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "SERP Intent Mapper — Keyword → Page Type Match",
+   "slug": "serp-intent-mapper-keyword-page-type-match",
+   "price": "$5",
+   "url": "https://agensi.io/skills/serp-intent-mapper-keyword-page-type-match",
+   "short_description": "SERP Intent Mapper — Keyword → Page Type Match",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Keyword Gap Analysis — Competitor Gaps + Priority Plan",
+   "slug": "keyword-gap-analysis-competitor-gaps-priority-plan",
+   "price": "$7",
+   "url": "https://agensi.io/skills/keyword-gap-analysis-competitor-gaps-priority-plan",
+   "short_description": "Keyword Gap Analysis — Competitor Gaps + Priority Plan",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Turn Any Brief into a Designer-Ready Infographic Plan",
+   "slug": "turn-any-brief-into-a-designer-ready-infographic-plan",
+   "price": "$5",
+   "url": "https://agensi.io/skills/turn-any-brief-into-a-designer-ready-infographic-plan",
+   "short_description": "Turn Any Brief into a Designer-Ready Infographic Plan",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Client Reports That Get Renewed: KPI → Exec Summary",
+   "slug": "client-reports-that-get-renewed-kpi-exec-summary",
+   "price": "$4",
+   "url": "https://agensi.io/skills/client-reports-that-get-renewed-kpi-exec-summary",
+   "short_description": "KPI → Exec Summary",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Turn Any Offer into Landing Page Copy That Converts",
+   "slug": "turn-any-offer-into-landing-page-copy-that-converts",
+   "price": "$5",
+   "url": "https://agensi.io/skills/turn-any-offer-into-landing-page-copy-that-converts",
+   "short_description": "Turn Any Offer into Landing Page Copy That Converts",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "SEO Meta Tags Generator — Titles, Descriptions + Schema",
+   "slug": "seo-meta-tags-generator-titles-descriptions-schema",
+   "price": "$5",
+   "url": "https://agensi.io/skills/seo-meta-tags-generator-titles-descriptions-schema",
+   "short_description": "SEO Meta Tags Generator — Titles, Descriptions + Schema",
+   "category": "AEO / AI search",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Local SEO Audit: GBP + NAP Fix Plan for Small Business",
+   "slug": "local-seo-audit-gbp-nap-fix-plan-for-small-business",
+   "price": "$5",
+   "url": "https://agensi.io/skills/local-seo-audit-gbp-nap-fix-plan-for-small-business",
+   "short_description": "GBP + NAP Fix Plan for Small Business",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "UAT Test Plan for Chatbots, Shopify + Workflows: Go/No-Go",
+   "slug": "uat-test-plan-for-chatbots-shopify-workflows-go-no-go",
+   "price": "$4",
+   "url": "https://agensi.io/skills/uat-test-plan-for-chatbots-shopify-workflows-go-no-go",
+   "short_description": "Go/No-Go",
+   "category": "Developer",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Vague Ticket → Precise Coding Prompt: Ship in One Pass",
+   "slug": "vague-ticket-precise-coding-prompt-ship-in-one-pass",
+   "price": "$4",
+   "url": "https://agensi.io/skills/vague-ticket-precise-coding-prompt-ship-in-one-pass",
+   "short_description": "Ship in One Pass",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "PR Description Writer — Summary, Changes + Test Plan",
+   "slug": "pr-description-writer-summary-changes-test-plan",
+   "price": "$4",
+   "url": "https://agensi.io/skills/pr-description-writer-summary-changes-test-plan",
+   "short_description": "PR Description Writer — Summary, Changes + Test Plan",
+   "category": "Developer",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Elementor Rebuild Brief: Section Map + Widget Stack",
+   "slug": "elementor-rebuild-brief-section-map-widget-stack",
+   "price": "$7",
+   "url": "https://agensi.io/skills/elementor-rebuild-brief-section-map-widget-stack",
+   "short_description": "Section Map + Widget Stack",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Write Commits Reviewers Approve: Conventional + Why",
+   "slug": "write-commits-reviewers-approve-conventional-why",
+   "price": "$3",
+   "url": "https://agensi.io/skills/write-commits-reviewers-approve-conventional-why",
+   "short_description": "Conventional + Why",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Website Project Scope: MVP Checklist + Risk Map",
+   "slug": "website-project-scope-mvp-checklist-risk-map",
+   "price": "$6",
+   "url": "https://agensi.io/skills/website-project-scope-mvp-checklist-risk-map",
+   "short_description": "MVP Checklist + Risk Map",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "App MVP Scope Audit: Must-Haves, Risks + First Build Slice",
+   "slug": "app-mvp-scope-audit-must-haves-risks-first-build-slice",
+   "price": "$4",
+   "url": "https://agensi.io/skills/app-mvp-scope-audit-must-haves-risks-first-build-slice",
+   "short_description": "Must-Haves, Risks + First Build Slice",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Find & Fix WhatsApp Chatbot Failures: P0–P2 Audit",
+   "slug": "find-fix-whatsapp-chatbot-failures-p0-p2-audit",
+   "price": "$4",
+   "url": "https://agensi.io/skills/find-fix-whatsapp-chatbot-failures-p0-p2-audit",
+   "short_description": "P0–P2 Audit",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Find Why Shopify Visitors Don't Buy: CRO Audit + Fix List",
+   "slug": "find-why-shopify-visitors-don-t-buy-cro-audit-fix-list",
+   "price": "$7",
+   "url": "https://agensi.io/skills/find-why-shopify-visitors-don-t-buy-cro-audit-fix-list",
+   "short_description": "CRO Audit + Fix List",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "README Generator: README.md from Your Real Project Files",
+   "slug": "readme-generator-readme-md-from-your-real-project-files",
+   "price": "$4",
+   "url": "https://agensi.io/skills/readme-generator-readme-md-from-your-real-project-files",
+   "short_description": "README.md from Your Real Project Files",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Find the Commit That Broke Your Code from Git History",
+   "slug": "find-the-commit-that-broke-your-code-from-git-history",
+   "price": "$4",
+   "url": "https://agensi.io/skills/find-the-commit-that-broke-your-code-from-git-history",
+   "short_description": "Find the Commit That Broke Your Code from Git History",
+   "category": "Developer",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Code Reviewer — Severity-Rated PR Review + Fix Plan",
+   "slug": "code-reviewer-severity-rated-pr-review-fix-plan",
+   "price": "$3",
+   "url": "https://agensi.io/skills/code-reviewer-severity-rated-pr-review-fix-plan",
+   "short_description": "Code Reviewer — Severity-Rated PR Review + Fix Plan",
+   "category": "Developer",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "GTM Market Check: ICP, Positioning Risks + Channel Tests",
+   "slug": "gtm-market-check-icp-positioning-risks-channel-tests",
+   "price": "$7",
+   "url": "https://agensi.io/skills/gtm-market-check-icp-positioning-risks-channel-tests",
+   "short_description": "ICP, Positioning Risks + Channel Tests",
+   "category": "Developer",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Code Review Lite — Severity Checklist",
+   "slug": "code-review-lite-severity-checklist",
+   "price": "Free",
+   "url": "https://agensi.io/skills/code-review-lite-severity-checklist",
+   "short_description": "Code Review Lite — Severity Checklist",
+   "category": "Developer",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "SEO Content Brief — Writer-Ready Outline",
+   "slug": "seo-content-brief-writer-ready-outline",
+   "price": "Free",
+   "url": "https://agensi.io/skills/seo-content-brief-writer-ready-outline",
+   "short_description": "SEO Content Brief — Writer-Ready Outline",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Humanize AI Writing: Remove AI Tells, Keep Your Meaning",
+   "slug": "humanize-ai-writing-remove-ai-tells-keep-your-meaning",
+   "price": "$5",
+   "url": "https://agensi.io/skills/humanize-ai-writing-remove-ai-tells-keep-your-meaning",
+   "short_description": "Remove AI Tells, Keep Your Meaning",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Turn Any Task into a Reusable Prompt Template",
+   "slug": "turn-any-task-into-a-reusable-prompt-template",
+   "price": "$5",
+   "url": "https://agensi.io/skills/turn-any-task-into-a-reusable-prompt-template",
+   "short_description": "Turn Any Task into a Reusable Prompt Template",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Customer Interviews → Themes, Jobs + Next Questions",
+   "slug": "customer-interviews-themes-jobs-next-questions",
+   "price": "$7",
+   "url": "https://agensi.io/skills/customer-interviews-themes-jobs-next-questions",
+   "short_description": "Customer Interviews → Themes, Jobs + Next Questions",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Price With Confidence — Tiers, Packaging + Test Plan",
+   "slug": "price-with-confidence-tiers-packaging-test-plan",
+   "price": "$9",
+   "url": "https://agensi.io/skills/price-with-confidence-tiers-packaging-test-plan",
+   "short_description": "Price With Confidence — Tiers, Packaging + Test Plan",
+   "category": "Developer",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Competitor Feature Gap Map: Find 3 Features You Can Win On",
+   "slug": "competitor-feature-gap-map-find-3-features-you-can-win-on",
+   "price": "$5",
+   "url": "https://agensi.io/skills/competitor-feature-gap-map-find-3-features-you-can-win-on",
+   "short_description": "Find 3 Features You Can Win On",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "AEO Audit — Get Cited in ChatGPT + AI Overviews",
+   "slug": "aeo-audit-get-cited-in-chatgpt-ai-overviews",
+   "price": "$7",
+   "url": "https://agensi.io/skills/aeo-audit-get-cited-in-chatgpt-ai-overviews",
+   "short_description": "AEO Audit — Get Cited in ChatGPT + AI Overviews",
+   "category": "AEO / AI search",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Chatbot Script Builder — Intents to MVP Conversation Flow",
+   "slug": "chatbot-script-builder-intents-to-mvp-conversation-flow",
+   "price": "$4",
+   "url": "https://agensi.io/skills/chatbot-script-builder-intents-to-mvp-conversation-flow",
+   "short_description": "Chatbot Script Builder — Intents to MVP Conversation Flow",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Keyword Clusters + Intent Map: No Paid SEO Tool Needed",
+   "slug": "keyword-clusters-intent-map-no-paid-seo-tool-needed",
+   "price": "$7",
+   "url": "https://agensi.io/skills/keyword-clusters-intent-map-no-paid-seo-tool-needed",
+   "short_description": "No Paid SEO Tool Needed",
+   "category": "SEO",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Landing Page Critique: P0–P2 Conversion Fix List",
+   "slug": "landing-page-critique-p0-p2-conversion-fix-list",
+   "price": "$5",
+   "url": "https://agensi.io/skills/landing-page-critique-p0-p2-conversion-fix-list",
+   "short_description": "P0–P2 Conversion Fix List",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Go-To-Market Plan — One-Pager + 30-Day Experiments",
+   "slug": "go-to-market-plan-one-pager-30-day-experiments",
+   "price": "$5",
+   "url": "https://agensi.io/skills/go-to-market-plan-one-pager-30-day-experiments",
+   "short_description": "Go-To-Market Plan — One-Pager + 30-Day Experiments",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Make Faster Business Decisions — Decision Memo Pack",
+   "slug": "make-faster-business-decisions-decision-memo-pack",
+   "price": "$7",
+   "url": "https://agensi.io/skills/make-faster-business-decisions-decision-memo-pack",
+   "short_description": "Make Faster Business Decisions — Decision Memo Pack",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "skill",
+   "title": "Source-Backed Research Brief: Facts, Citations + Angles",
+   "slug": "source-backed-research-brief-facts-citations-angles",
+   "price": "$4",
+   "url": "https://agensi.io/skills/source-backed-research-brief-facts-citations-angles",
+   "short_description": "Facts, Citations + Angles",
+   "category": "Productivity",
+   "platform": "Agensi"
+  },
+  {
+   "type": "apify_actor",
+   "title": "Redirect Chain Checker & Bulk HTTP Status Checker: 301 QA",
+   "slug": "redirect-checker",
+   "price": "$0.0008 per url checked",
+   "url": "https://apify.com/cygnix_labs/redirect-checker",
+   "short_description": "Bulk redirect chain checker and HTTP status code checker. Traces every hop (301/302/307/308, meta refresh), flags redirect chains, loops, 404s, soft 404s and noindex targets, and QAs old→new redirect maps after a...",
+   "category": "SEO",
+   "platform": "Apify"
+  },
+  {
+   "type": "apify_actor",
+   "title": "Crawled - Currently Not Indexed Fixer (GSC Indexing Diagnosis)",
+   "slug": "indexing-fix-planner",
+   "price": "$0.004 per url diagnosed",
+   "url": "https://apify.com/cygnix_labs/indexing-fix-planner",
+   "short_description": "Why won't Google index my pages? Paste your Search Console not-indexed URLs: per-URL cause (404, noindex vs sitemap, canonical, near-duplicate, thin, JS-empty, orphan, weak links, low-value URL) + fix, in priority...",
+   "category": "SEO",
+   "platform": "Apify"
+  },
+  {
+   "type": "apify_actor",
+   "title": "Website SEO Audit & Site Audit Crawler: Technical SEO + AEO/GEO",
+   "slug": "site-seo-aeo-audit",
+   "price": "$0.01 per page audited",
+   "url": "https://apify.com/cygnix_labs/site-seo-aeo-audit",
+   "short_description": "SEO audit + site audit crawler with an AI search readiness (AEO/GEO) score + technical SEO checks. One URL in: each page and the site scored 0-100 for meta tags, broken links, soft 404s, schema, llms.txt,...",
+   "category": "AEO / AI search",
+   "platform": "Apify"
+  },
+  {
+   "type": "apify_actor",
+   "title": "AEO & AI Visibility Audit: LLM SEO, GEO + llms.txt Checker",
+   "slug": "aeo-readiness-checker",
+   "price": "$0.005 per page audited",
+   "url": "https://apify.com/cygnix_labs/aeo-readiness-checker",
+   "short_description": "AEO & GEO audit (answer engine optimization, generative engine optimization, LLM SEO): can ChatGPT, Perplexity, Claude and AI Overviews cite your pages? 0-100 AI search visibility score per URL, llms.txt checker,...",
+   "category": "AEO / AI search",
+   "platform": "Apify"
+  },
+  {
+   "type": "apify_actor",
+   "title": "Spam Backlink Checker: Toxic Links Triage & Disavow Decision",
+   "slug": "spam-backlink-triage",
+   "price": "$0.001 per referring domain triaged",
+   "url": "https://apify.com/cygnix_labs/spam-backlink-triage",
+   "short_description": "Getting spam backlinks? Paste your Search Console, Semrush or Ahrefs backlink export: one answer (NO / MONITOR / ACT), a verdict per referring domain (OK, IGNORE, WATCH, DISAVOW), negative-SEO spike check, disavow...",
+   "category": "SEO",
+   "platform": "Apify"
+  },
+  {
+   "type": "apify_actor",
+   "title": "Storefront SEO Regression Checker | HTML Release Diff",
+   "slug": "cygnix-storefront-release-proof",
+   "price": "$0.05 per completed report",
+   "url": "https://apify.com/cygnix_labs/cygnix-storefront-release-proof",
+   "short_description": "Compare supplied before-and-after storefront HTML for canonical, noindex and Product/Offer JSON-LD changes. Get PASS, FAIL or HOLD plus JSON, CSV and HTML evidence. Up to 20 page pairs per report. $0.05 per completed...",
+   "category": "SEO",
+   "platform": "Apify"
+  },
+  {
+   "type": "apify_actor",
+   "title": "Instagram JSON Export Cleaner and Deduplicator",
+   "slug": "cygnix-instagram-export-cleaner",
+   "price": "$0.05 per completed cleanup report",
+   "url": "https://apify.com/cygnix_labs/cygnix-instagram-export-cleaner",
+   "short_description": "Normalize supplied Instagram post JSON, remove duplicate selections and keep only unseen records using your checkpoint. Preserve carousel children and separate views from plays. Get clean rows and per-row receipts....",
+   "category": "SEO",
+   "platform": "Apify"
+  },
+  {
+   "type": "apify_actor",
+   "title": "Internal Links Checker: Orphan Pages & Internal Linking Audit",
+   "slug": "internal-link-audit",
+   "price": "$0.002 per page audited",
+   "url": "https://apify.com/cygnix_labs/internal-link-audit",
+   "short_description": "Check your internal links from the sitemap: orphan pages, weak pages, broken internal links, links to redirects, noindex or redirected sitemap URLs, click depth and anchor text, with a fix per page. First 25 pages...",
+   "category": "SEO",
+   "platform": "Apify"
+  },
+  {
+   "type": "apify_actor",
+   "title": "SEO Change Impact Checker: GSC Before/After Test",
+   "slug": "seo-change-impact-checker",
+   "price": "$0.01 per change analysed",
+   "url": "https://apify.com/cygnix_labs/seo-change-impact-checker",
+   "short_description": "Did your SEO change work or is it noise? Upload a Google Search Console CSV + change date: matched DOW-adjusted windows, control-group diff-in-diff, placebo noise band, GSC lag guard, verdict REAL WIN / LOSS / NOISE...",
+   "category": "SEO",
+   "platform": "Apify"
+  },
+  {
+   "type": "apify_actor",
+   "title": "Hashtag Generator & Finder: Instagram & TikTok Hashtags",
+   "slug": "hashtag-research-strategy",
+   "price": "$0.03 per seed hashtag report",
+   "url": "https://apify.com/cygnix_labs/hashtag-research-strategy",
+   "short_description": "Hashtag generator, finder and analytics for Instagram hashtags and TikTok hashtags from real posts: tags creators pair with your seed, real post/view counts, broad/mid/niche tiers, paste-ready 5 and 15 tag sets,...",
+   "category": "Social media",
+   "platform": "Apify"
+  },
+  {
+   "type": "apify_actor",
+   "title": "Keyword Clustering Tool & Grouper + Content Brief Generator",
+   "slug": "keyword-clusterer-brief",
+   "price": "$0.0007 per keyword clustered; $0.01 per content brief",
+   "url": "https://apify.com/cygnix_labs/keyword-clusterer-brief",
+   "short_description": "Keyword clustering & keyword grouping tool: group a keyword list or Ahrefs/Semrush/GSC/Keyword Planner export into topic clusters by shared terms + search intent, build a topical map, get content briefs. 100 keywords...",
+   "category": "SEO",
+   "platform": "Apify"
+  },
+  {
+   "type": "apify_actor",
+   "title": "Best Time to Post: Instagram, TikTok, YouTube & LinkedIn",
+   "slug": "social-best-time-to-post",
+   "price": "$0.03 per account report",
+   "url": "https://apify.com/cygnix_labs/social-best-time-to-post",
+   "short_description": "Find the best time to post on Instagram, TikTok, YouTube and LinkedIn from real post data or your analytics CSV export: weekday x hour heatmap in your time zone, engagement rate, best format, caption and hashtag fit,...",
+   "category": "Social media",
+   "platform": "Apify"
+  },
+  {
+   "type": "apify_actor",
+   "title": "Brand Facts Checker & Organization Schema Generator (AEO)",
+   "slug": "brand-facts-checker",
+   "price": "$0.009 per site audited",
+   "url": "https://apify.com/cygnix_labs/brand-facts-checker",
+   "short_description": "Find brand facts your own site contradicts (founding year, customer counts, phone/email, schema vs page, 404 About page, placeholder sameAs) and get Organization JSON-LD + a citable brand-facts page for AI Overviews,...",
+   "category": "AEO / AI search",
+   "platform": "Apify"
+  },
+  {
+   "type": "apify_actor",
+   "title": "YouTube Channel Analyzer: Analytics & Competitor Analysis",
+   "slug": "youtube-channel-analyzer",
+   "price": "$0.025 per channel report",
+   "url": "https://apify.com/cygnix_labs/youtube-channel-analyzer",
+   "short_description": "YouTube channel analyzer for creators and marketers: subscribers, views, upload cadence, best upload day and hour, outlier videos vs channel median, winning title patterns and topics, engagement rate, Shorts vs...",
+   "category": "Social media",
+   "platform": "Apify"
+  },
+  {
+   "type": "apify_actor",
+   "title": "Keyword Cannibalization Checker for Google Search Console",
+   "slug": "keyword-cannibalization-finder",
+   "price": "$0.005 per cannibalization issue",
+   "url": "https://apify.com/cygnix_labs/keyword-cannibalization-finder",
+   "short_description": "Keyword cannibalization checker for Google Search Console (GSC): paste a query+page export or a Google Sheets/CSV link. Get pages competing for the same keyword, click split, HIGH/MEDIUM/LOW severity and the safe fix...",
+   "category": "SEO",
+   "platform": "Apify"
+  },
+  {
+   "type": "apify_actor",
+   "title": "Email Scraper & Contact Details Scraper: Phones, Socials",
+   "slug": "outreach-contact-finder",
+   "price": "$0.004 per domain with contacts",
+   "url": "https://apify.com/cygnix_labs/outreach-contact-finder",
+   "short_description": "Email scraper and contact details scraper for websites. Paste domains or URLs (e.g. Google Maps leads) and get emails, phone numbers (incl. WhatsApp), contact/impressum pages and social links (LinkedIn, X, Instagram,...",
+   "category": "Lead generation",
+   "platform": "Apify"
+  },
+  {
+   "type": "apify_actor",
+   "title": "SERP Intent Mapper: Keyword Search Intent Classifier",
+   "slug": "serp-intent-mapper",
+   "price": "$0.0005 per keyword classified",
+   "url": "https://apify.com/cygnix_labs/serp-intent-mapper",
+   "short_description": "Bulk search intent classifier for keyword lists. Labels each keyword informational, commercial, transactional or navigational (+ local, question flags) and names the page type to build. English, Spanish, German,...",
+   "category": "SEO",
+   "platform": "Apify"
+  },
+  {
+   "type": "apify_actor",
+   "title": "Content Decay Audit - Google Search Console Traffic Drop",
+   "slug": "content-decay-audit",
+   "price": "$0.001 per page analyzed",
+   "url": "https://apify.com/cygnix_labs/content-decay-audit",
+   "short_description": "Content decay audit for Google Search Console: compare Pages exports (CSV, GSC ZIP, Excel or Google Sheets link, any language) and find pages losing traffic. Labels LOST, RANK_SLIP, DECAYING, CTR_DROP, ranked by...",
+   "category": "SEO",
+   "platform": "Apify"
+  },
+  {
+   "type": "apify_actor",
+   "title": "Tech Stack Detector, Pixel Checker & BuiltWith Alternative",
+   "slug": "website-tech-stack-detector",
+   "price": "$0.0015 per domain analyzed",
+   "url": "https://apify.com/cygnix_labs/website-tech-stack-detector",
+   "short_description": "Tech stack detector, pixel checker and BuiltWith / Wappalyzer alternative for lead lists. Paste domains or emails; get CMS, Shopify, GA4, GTM tags, Meta/TikTok/LinkedIn pixels, tracking IDs, consent, chat, hosting...",
+   "category": "Lead generation",
+   "platform": "Apify"
+  }
+ ]
+}
