@@ -87,16 +87,21 @@ let mx=0,my=0;addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e
 addEventListener('resize',()=>{camera.aspect=W()/H();camera.updateProjectionMatrix();renderer.setSize(W(),H());});
 let visible=true;new IntersectionObserver(es=>{visible=es[0].isIntersecting;}).observe(host);
 
-const clock=new THREE.Clock();let spawnT=0;const tmp=new THREE.Vector3();
+const clock=new THREE.Clock();let hs=0;let spawnT=0;const tmp=new THREE.Vector3();
 spawnPage();spawnPage();
 function tick(){
   requestAnimationFrame(tick);
   if(!visible||document.hidden){clock.getDelta();return;}
   const dt=Math.min(clock.getDelta(),.05), t=clock.elapsedTime;
-  camera.position.x+=(mx*2.2-camera.position.x)*.04; camera.position.y+=(1.0-my*1.2-camera.position.y)*.04; camera.lookAt(0,0,0);
-  eagle.position.y=Math.sin(t*1.1)*.12; eagle.lookAt(camera.position); glow.material.opacity=.85+Math.sin(t*2)*.15;
+  const sp=window.CYG_HERO||0; hs+=(sp-hs)*.12; // smoothed scroll progress 0..1
+  camera.position.x+=(mx*2.2-camera.position.x)*.04; camera.position.y+=(1.0-my*1.2+hs*1.5-camera.position.y)*.04;
+  camera.position.z=13.2-hs*6.5; camera.lookAt(0,hs*1.2,0); camera.rotation.z=hs*.12;
+  eagle.position.y=Math.sin(t*1.1)*.12+hs*2.6; eagle.position.z=hs*2.5; glow.position.y=eagle.position.y; shell.position.y=eagle.position.y*.6; shell.scale.setScalar(1+hs*.8);
+  rings.scale.setScalar(1+hs*1.4); rings.position.y=hs*-1.5;
+  scene.traverse(o=>{if(o.material&&o!==stars&&o.userData.base===undefined)o.userData.base=o.material.opacity;});
+  const fade=1-hs*.85; tools.concat(pages,[eagle,shell]).forEach(o=>{if(o.userData.base!==undefined&&!o.userData.state)o.material.opacity=o.userData.base*fade;}); eagle.lookAt(camera.position); glow.material.opacity=.85+Math.sin(t*2)*.15;
   shell.rotation.y+=dt*.12; shell.rotation.x+=dt*.05; stars.rotation.y+=dt*.01;
-  tools.forEach(m=>{const u=m.userData;u.a+=dt*u.speed;orbitPos(u.o,u.a,m.position);m.lookAt(camera.position);
+  tools.forEach((m,k)=>{const u=m.userData;u.a+=dt*u.speed*(1+hs*3);orbitPos(u.o,u.a,m.position);m.position.multiplyScalar(1+hs*1.6);m.position.y+=hs*(k%3-1)*2.2;m.position.z+=hs*3;m.lookAt(camera.position);
     const s=1+(u.busy>0?.12*Math.sin(Math.min(u.busy,1)*Math.PI):0);m.scale.setScalar(s);u.busy=Math.max(0,u.busy-dt);
     m.renderOrder=Math.round(m.position.z*10)+100;});
   eagle.renderOrder=100;

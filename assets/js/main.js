@@ -18,11 +18,7 @@ if(!reduce&&!small&&!lowMem&&webgl()){
 
 /* ---------- reveal ---------- */
 var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12}):null;
-document.querySelectorAll('.rv').forEach(function(el){io?io.observe(el):el.classList.add('in');});
-// light steps in sequence
-var steps=document.querySelectorAll('.step');
-if(steps.length&&!reduce){var si=0;setInterval(function(){steps.forEach(function(s,i){s.classList.toggle('lit',i===si);});si=(si+1)%steps.length;},2600);}
-
+if(!root.classList.contains('motion'))document.querySelectorAll('.rv').forEach(function(el){io?io.observe(el):el.classList.add('in');});
 /* ---------- tools from feed ---------- */
 var grid=document.getElementById('tool-grid');
 var tabs=document.querySelectorAll('.tab');
@@ -40,12 +36,14 @@ function render(){if(!grid)return;
  var limit=showAll?list.length:(filter==='agensi'?12:(small?6:list.length));
  grid.innerHTML=list.slice(0,limit).map(card).join('');
  if(moreBtn){moreBtn.hidden=list.length<=limit;moreBtn.textContent='Show all '+list.length;}
+ document.dispatchEvent(new CustomEvent('cyg:tools'));
 }
+function swap(){if(window.CygMotion&&window.CygMotion.swap)window.CygMotion.swap(render);else render();}
 function load(url){return fetch(url,{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json();});}
 function use(d){var l=clean(d.items||d.listings||d||[]);if(l.length){items=l;render();var u=document.getElementById('feed-updated');if(u&&d.updated)u.textContent='Listings updated '+d.updated+' · '+l.length+' live tools and skills';}}
 if(grid){load(FEED_LOCAL).then(use).catch(function(){}).then(function(){return load(FEED_REMOTE).then(use);}).catch(function(){});
- tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x){x.setAttribute('aria-selected','false');});t.setAttribute('aria-selected','true');filter=t.dataset.f;showAll=false;render();});});
- if(moreBtn)moreBtn.addEventListener('click',function(){showAll=true;render();});}
+ tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x){x.setAttribute('aria-selected','false');});t.setAttribute('aria-selected','true');filter=t.dataset.f;showAll=false;swap();});});
+ if(moreBtn)moreBtn.addEventListener('click',function(){showAll=true;swap();});}
 
 /* ---------- forms ---------- */
 function send(data){data._template='table';data._captcha='false';
