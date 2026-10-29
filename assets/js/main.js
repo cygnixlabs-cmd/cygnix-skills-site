@@ -3,7 +3,7 @@
 var CONTACT_EMAIL='info@cygnixlabs.com';
 /* Form backend: Formgong (free, emails each submission to info@). Paste the public fk_ access key below.
    While it is empty, the forms open the visitor's email app with the message addressed to info@ (no backend needed). */
-var FORM_KEY='';
+var FORM_KEY='fk_GzPB9Nzex3utDEBEsiDevwgv';
 var FORM_ENDPOINT='https://formgong.com/submit';
 var FEED_LOCAL='feed/cygnix-listings.json';
 var FEED_REMOTE='https://raw.githubusercontent.com/cygnixlabs-cmd/cygnix-seo-skills/main/feed/cygnix-listings.json';
