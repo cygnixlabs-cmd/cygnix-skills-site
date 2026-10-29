@@ -2,10 +2,14 @@
 
 > Cygnix Labs builds SEO and AEO (answer engine optimization) tools and fixes websites that are not showing on Google or in AI answers such as ChatGPT, Perplexity and Google AI Overviews. Every job follows three steps: the problem, a proof report from a real tool run, and the fix.
 
-Contact: cygnixlabs@gmail.com · Site: https://skills.cygnixlabs.com/ · Free site check: https://skills.cygnixlabs.com/#contact
+Contact: cygnixlabs@gmail.com · Site: https://skills.cygnixlabs.com/ · Pricing: https://skills.cygnixlabs.com/pricing.html · Free site check: https://skills.cygnixlabs.com/#contact
 
-## Packages
+## Packages and pricing
 
+Full pricing: https://skills.cygnixlabs.com/pricing.html. There is no card checkout on this site. Book a package, we confirm the scope by email, and we send an invoice. The payment options are listed on the invoice.
+
+- White-label AI visibility audit: $99 one-time. SEO + AEO (AI visibility) audit of one client site, delivered under the agency's brand with a prioritised fix list.
+- White-label AI visibility audit, pack of 4: $299 one-time. Four white-label SEO + AEO audits for four client sites ($74.75 each), one invoice.
 - Monitor: $29/month. Monthly SEO + AEO audit, indexing and redirect checks, report by email.
 - Growth: $59/month. Monitor plus a monthly prioritised fix plan, content decay and cannibalization checks, 2 briefs a month.
 - Agency: $99/month. 5 client sites with white-label reports and all Monitor + Growth checks.
@@ -108,5 +112,5 @@ Contact: cygnixlabs@gmail.com · Site: https://skills.cygnixlabs.com/ · Free si
 
 ## Optional
 
+- [Pricing and packages](https://skills.cygnixlabs.com/pricing.html)
 - [Listings feed (JSON)](https://skills.cygnixlabs.com/feed/cygnix-listings.json)
-- [Gumroad packs](https://cygnixlabs.gumroad.com/)
