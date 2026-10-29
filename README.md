@@ -1,10 +1,12 @@
 # Cygnix Labs skills hub: skills.cygnixlabs.com
 
-A one-page, 3D landing site for Cygnix Labs SEO + AEO tools, packages and contact. It's a static site served from GitHub Pages.
+A two-page, 3D site (home `index.html` + `pricing.html`) for Cygnix Labs SEO + AEO tools, packages and contact. It's a static site served from GitHub Pages.
 
 ## Structure
-- `template.html`: page source with `{{placeholders}}`
-- `build.py`: writes `index.html`, `llms.txt`, `sitemap.xml` and `robots.txt` from the template plus `feed/cygnix-listings.json`
+- `template.html`: homepage source (problem → what our tools find → results process → tools → FAQ → contact). No prices on the homepage.
+- `pricing-template.html`: pricing page (white-label audit $99 / 4 for $299, monthly plans, one-time, how payment works, pricing FAQ, booking form).
+- **Packages and payment copy live in `build.py`** (`packs`, `BOOK`, `PAY_SHORT`, `PAY_LEAD`, `PAY_NOTE`). Change them there when a payment method (PayPal, Wise, bank) is chosen, then rebuild. Buttons open the contact form with the package preselected; `pricing.html?package=<exact option>#contact` also preselects.
+- `build.py`: writes `index.html`, `pricing.html`, `llms.txt`, `sitemap.xml` and `robots.txt` from the template plus `feed/cygnix-listings.json`
   - `python3 build.py --fetch` pulls the latest feed from `cygnixlabs-cmd/cygnix-seo-skills/feed/` first
   - At runtime the page also refreshes the tool cards from the same raw GitHub feed, so new listings appear without a rebuild. The cards are prerendered in HTML for crawlers.
 - `assets/js/scene.js`: the Three.js hero, with the eagle core, orbiting tool cards, and "not indexed" pages being scanned and fixed. Three.js r160 is vendored in `assets/vendor/`.
