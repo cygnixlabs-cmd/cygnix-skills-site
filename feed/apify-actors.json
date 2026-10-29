@@ -1,0 +1,236 @@
+{
+ "redirect-checker": {
+  "title": "Redirect Checker: Redirect Chains & HTTP Status Codes",
+  "description": "Redirect checker for bulk URLs: traces every hop (301/302/307/308, meta refresh), flags redirect chains, loops, 404s, soft 404s and noindex targets, works as a bulk URL status checker, and QAs old→new redirect maps after a site migration. First 20 URLs free, then $0.0008/URL.",
+  "seoDescription": "Bulk redirect checker: trace 301/302 redirect chains and loops, check HTTP status codes, find 404s and soft 404s, QA migration redirect maps. 20 URLs free.",
+  "use_cases": [
+   "Site migration QA: validate old→new redirect maps and detect map mismatches",
+   "Redirect chain and loop cleanup: find multi-hop chains, loops and too-many-redirects",
+   "Broken link and 4xx/5xx detection across many URLs",
+   "HTTP → HTTPS and www canonicalization checks",
+   "Verify old sitemaps or backlink targets after a relaunch",
+   "Generate fix lists and flattened source→final redirect mappings for rewrite rules"
+  ],
+  "users": 2
+ },
+ "indexing-fix-planner": {
+  "title": "Crawled - Currently Not Indexed Fixer (GSC Indexing Diagnosis)",
+  "description": "Why won't Google index my pages? Paste your Search Console not-indexed URLs: per-URL cause (404, noindex vs sitemap, canonical, near-duplicate, thin, JS-empty, orphan, weak links, low-value URL) + fix, in priority order. $0.004 per URL.",
+  "seoDescription": "Paste your Search Console not-indexed URLs and get one cause + fix per URL: noindex conflicts, duplicates, thin/JS-empty, orphans, canonicals. $0.004/URL.",
+  "use_cases": [
+   "Diagnose Search Console \"Crawled - currently not indexed\" and \"Discovered - currently not indexed\" URLs and generate prioritized fixes.",
+   "Identify and resolve noindex presence and noindex-in-sitemap conflicts.",
+   "Detect canonical tags that point to other pages and advise corrective canonicalization.",
+   "Find near‑duplicate pages via n‑word shingles to address duplicate/low‑value content.",
+   "Spot thin content and pages that rely on client‑side JavaScript for primary content.",
+   "Reveal orphan pages and weak internal linking from sampled hub pages and homepage."
+  ],
+  "users": 2
+ },
+ "site-seo-aeo-audit": {
+  "title": "Website SEO Audit & Site Audit Crawler: Technical SEO + AEO/GEO",
+  "description": "SEO audit + site audit crawler with an AI search readiness (AEO/GEO) score + technical SEO checks. One URL in: each page and the site scored 0-100 for meta tags, broken links, soft 404s, schema, llms.txt, GPTBot/ClaudeBot access, answerability. Fix plan, client report. 10 pages free, then $0.01/page",
+  "seoDescription": "SEO audit + site audit crawler: 0-100 per page for meta tags, broken links, soft 404s, schema, llms.txt, AI crawlers. 10 pages free, then $0.01/page.",
+  "use_cases": [
+   "Run a combined technical SEO and AI search readiness (AEO/GEO) audit for a single website.",
+   "Detect and report missing or incorrect meta tags and share-preview problems (og/twitter).",
+   "Validate and parse JSON-LD / structured data for common types (Article, Product, FAQ, HowTo, Organization, LocalBusiness, BreadcrumbList, Review, Event).",
+   "Check AI crawler access and llms.txt presence and report which major AI crawlers are allowed or blocked.",
+   "Identify pages lacking answer-first passages, question-style headings, or sufficient server-rendered text for AI answer extraction.",
+   "Find broken internal links and list the linking pages for remediation."
+  ],
+  "users": 2
+ },
+ "aeo-readiness-checker": {
+  "title": "AEO & AI Visibility Audit: LLM SEO, GEO + llms.txt Checker",
+  "description": "llms.txt checker + AI search readiness audit (AEO, GEO, LLM SEO): can ChatGPT, Perplexity, Claude and AI Overviews cite your pages? 0-100 AI visibility score per URL, llms.txt validation, robots.txt check for 14 AI bots, noindex, broken FAQ schema. 5 free, then $0.005/page.",
+  "seoDescription": "Answer engine optimization (AEO) & GEO audit: can ChatGPT, Perplexity & AI Overviews cite you? 0-100 AI search visibility score + llms.txt check. $0.005/page",
+  "use_cases": [
+   "AEO/GEO audits and client reports for AI visibility and LLM SEO",
+   "Pre-publish checks to confirm pages are discoverable and quotable by ChatGPT, Perplexity, Claude and AI Overviews",
+   "Detecting robots.txt rules that block specific AI search or AI training bots for particular site sections",
+   "Identifying noindex, nosnippet or X‑Robots‑Tag issues that prevent AI engines from quoting content",
+   "Validating llms.txt and llms-full.txt presence and basic formatting (title, links)",
+   "Detecting malformed JSON‑LD/microdata and diagnosing broken schema blocks (FAQPage, Question, Answer, Product, Article)"
+  ],
+  "users": 2
+ },
+ "spam-backlink-triage": {
+  "title": "Spam Backlink Checker: Toxic Links Triage & Disavow Decision",
+  "description": "Getting spam backlinks? Paste your Search Console, Semrush or Ahrefs backlink export: one answer (NO / MONITOR / ACT), a verdict per referring domain (OK, IGNORE, WATCH, DISAVOW_CANDIDATE), negative-SEO spike check, disavow draft for manual review only. $0.001/domain.",
+  "seoDescription": "Getting spam backlinks? Paste your GSC, Semrush or Ahrefs export: should you care, which domains to ignore or watch, and a disavow draft for manual review only. $0.001/domain.",
+  "use_cases": [
+   "Decide whether to take action, monitor, or ignore a set of referring domains based on Google disavow guidance and heuristic risk assessment.",
+   "Triage large backlink exports to identify domains that warrant manual review, removal requests, or disavow consideration.",
+   "Detect recent negative-SEO spikes by comparing new spammy referring domains over recent weeks.",
+   "Produce a draft disavow file in Google's domain: format for manual review and merging with existing disavow submissions.",
+   "Generate a Markdown report summarizing per-domain reasons and signals to share with clients or stakeholders.",
+   "Identify common spam signals such as link-seller pages, keyword-rich dofollow anchors, toxic or adult/pharma/gambling anchors, auto-generated/content-scraper pages, hosting/IP clustering, sitewide or multi-subdomain patterns, and elevated toxic scores from SEO tools."
+  ],
+  "users": 2
+ },
+ "internal-link-audit": {
+  "title": "Internal Links Checker: Orphan Pages & Internal Linking Audit",
+  "description": "Check your internal links from the sitemap: orphan pages, weak pages, broken internal links, links to redirects, noindex or redirected sitemap URLs, click depth and anchor text, with a fix per page. First 25 pages free, then $0.002/page.",
+  "seoDescription": "Check internal links from your sitemap: orphan pages, broken internal links, links to redirects, noindex URLs, click depth and anchors. 25 pages free.",
+  "use_cases": [
+   "Orphan page audits to locate pages with zero or few inlinks and prioritize internal linking work",
+   "Internal linking audits to quantify inlink counts, click-depth from homepage, and top anchor texts",
+   "Detection of broken internal pages and pages that contain broken internal links",
+   "Identification of internal links that resolve via redirects (internal links to redirects) and their redirect targets",
+   "Sitemap clean-up after a migration: find listed URLs that redirect, are noindexed, or have canonical tags pointing elsewhere",
+   "Finding internal pages that are linked from crawled pages but missing from the sitemap (sitemap gap analysis)"
+  ],
+  "users": 1
+ },
+ "seo-change-impact-checker": {
+  "title": "SEO Change Impact Checker: GSC Before/After Test",
+  "description": "Did your SEO change work or is it noise? Upload a Google Search Console CSV + change date: matched DOW-adjusted windows, control-group diff-in-diff, placebo noise band, GSC lag guard, verdict REAL WIN / LOSS / NOISE / TOO EARLY. $0.01 per change.",
+  "seoDescription": "Did your SEO change work or is it noise? Google Search Console CSV in, verdict out: control-group diff-in-diff, placebo noise band, GSC lag guard. $0.01/change.",
+  "use_cases": [
+   "Measuring impact of title and meta tag rewrites",
+   "Validating content refreshes and editorial updates",
+   "Evaluating internal-linking pushes",
+   "Assessing schema rollouts and structured data changes",
+   "Measuring page speed or technical performance changes",
+   "Checking the effect of site migrations or structural changes"
+  ],
+  "users": 2
+ },
+ "hashtag-research-strategy": {
+  "title": "Hashtag Generator & Finder: Instagram & TikTok Hashtags",
+  "description": "Hashtag generator, finder and analytics for Instagram hashtags and TikTok hashtags from real posts: tags creators pair with your seed, real post/view counts, broad/mid/niche tiers, paste-ready 5 and 15 tag sets, avoid list. Any language. First seed free, then $0.03/seed.",
+  "seoDescription": "Find the best Instagram hashtags and TikTok hashtags from real posts: related tags with post/view counts, broad/mid/niche tiers, paste-ready sets. First seed free.",
+  "use_cases": [
+   "Generate paste-ready hashtag sets for Instagram Reels and TikTok videos (core and extended sets).",
+   "Hashtag research and strategy for clients, content planning, and niche discovery.",
+   "Rank and tier related hashtags by live Instagram post counts and TikTok view counts (broad / mid / niche / micro).",
+   "Identify tags creators actually pair with a seed via co-occurrence analysis by distinct accounts.",
+   "Find tags to avoid (generic engagement-bait, micro or zero-volume tags) and surface example posts for context.",
+   "Compare TikTok tag performance relative to a seed using median plays (performance-vs-seed)."
+  ],
+  "users": 2
+ },
+ "keyword-clusterer-brief": {
+  "title": "Keyword Clustering Tool & Grouper + Content Brief Generator",
+  "description": "Keyword clustering & keyword grouping tool: group a keyword list or Ahrefs/Semrush/GSC/Keyword Planner export into topic clusters by shared terms + search intent, build a topical map, get content briefs. 100 keywords free, then $0.70/1k + $0.01/brief.",
+  "seoDescription": "Group keywords into topic clusters, build a topical map and get SEO content briefs from any keyword export. 100 keywords free, then $0.70 per 1,000.",
+  "use_cases": [
+   "Build topical authority maps and content plans (pillar/cluster structure)",
+   "Generate content briefs and outlines for writers or AI writers",
+   "Create prioritized topical maps by keyword volume and intent",
+   "Group keywords for PPC ad groups and campaign structuring"
+  ],
+  "users": 2
+ },
+ "social-best-time-to-post": {
+  "title": "Best Time to Post: Instagram, TikTok, YouTube & LinkedIn",
+  "description": "Find the best time to post on Instagram, TikTok, YouTube and LinkedIn from real post data or your analytics CSV export: weekday x hour heatmap in your time zone, engagement rate, best format, caption and hashtag fit, 7-day posting schedule. $0.03 per account report.",
+  "seoDescription": "Best time to post on Instagram, TikTok, YouTube & LinkedIn from public accounts or your CSV export: heatmap in your time zone + posting schedule. $0.03/report.",
+  "use_cases": [
+   "Determine the best times to post on Instagram, TikTok, YouTube or LinkedIn for a specific account or competitor.",
+   "Generate a prioritized 7-day posting schedule based on historical post performance.",
+   "Benchmark competitor posting patterns and compare engagement and timing.",
+   "Measure median engagement rate (by followers or by views/impressions) and content-format ROI.",
+   "Identify top-performing and weakest posts to inform content strategy.",
+   "Optimize caption length and hashtag usage through historical performance analysis."
+  ],
+  "users": 2
+ },
+ "brand-facts-checker": {
+  "title": "Brand Facts Checker & Organization Schema Generator (AEO)",
+  "description": "Find brand facts your own site contradicts (founding year, customer counts, phone/email, schema vs page, 404 About page, placeholder sameAs) and get Organization JSON-LD + a citable brand-facts page for AI Overviews, AI Mode and ChatGPT. $0.009 per site.",
+  "seoDescription": "Find contradicting brand facts on your site and generate Organization JSON-LD plus a citable brand-facts page for AI Overviews and ChatGPT. $0.009/site.",
+  "use_cases": [
+   "Entity and brand-consistency audits for SEO/agency client portfolios",
+   "Pre-launch checks to catch stale numbers on landing, jobs and press pages",
+   "Schema work: generate Organization JSON-LD and collect sameAs profile links from the site",
+   "Create a single source-of-truth brand-facts page to support AI overviews and generative answers"
+  ],
+  "users": 2
+ },
+ "youtube-channel-analyzer": {
+  "title": "YouTube Channel Analyzer: Analytics & Competitor Analysis",
+  "description": "YouTube channel analyzer for creators and marketers: subscribers, views, upload cadence, best upload day and hour, outlier videos vs channel median, winning title patterns and topics, engagement rate, Shorts vs long-form, competitor comparison and recommendations. $0.025 per channel report.",
+  "seoDescription": "YouTube channel analyzer: stats, upload cadence, best upload day/hour, outlier videos, title patterns, topics and competitor comparison. $0.025/channel.",
+  "use_cases": [
+   "YouTube competitor analysis and side-by-side channel comparison",
+   "Channel audits and creator vetting for sponsorships",
+   "Content strategy and editorial planning (identify topics, title styles and duration buckets that overperform)",
+   "Finding outlier or viral video ideas from a channel’s breakout uploads",
+   "Determining best time and day to publish content for a channel’s audience",
+   "Comparing Shorts performance vs long-form content"
+  ],
+  "users": 2
+ },
+ "keyword-cannibalization-finder": {
+  "title": "Keyword Cannibalization Checker for Google Search Console",
+  "description": "Keyword cannibalization checker for Google Search Console (GSC): paste a query+page export or a Google Sheets/CSV link. Get pages competing for the same keyword, click split, HIGH/MEDIUM/LOW severity and the safe fix (merge + 301, de-optimize or monitor). First 5 issues free, then $0.005 each.",
+  "seoDescription": "Find pages competing for the same query in a GSC export or Google Sheet: click split, severity and a safe fix (merge+301 or de-optimize). 5 free, $0.005/issue.",
+  "use_cases": [
+   "Keyword cannibalization audits to find queries where multiple site pages compete",
+   "Content consolidation planning and merge/redirect decisions (merge + 301)",
+   "Identifying pages to de-optimize and consolidate via internal linking",
+   "Determining which pages compete for the same query or have duplicate intent",
+   "Pre-migration SEO clean-ups to resolve competing pages and URL variants",
+   "Agent-driven workflows where an agent is given Search Console data to recommend merges, redirects, or de-optimization strategies"
+  ],
+  "users": 2
+ },
+ "outreach-contact-finder": {
+  "title": "Email Scraper & Contact Details Scraper: Phones, Socials",
+  "description": "Email scraper and contact details scraper for websites. Paste domains or URLs (e.g. Google Maps leads) and get emails, phone numbers (incl. WhatsApp), contact/impressum pages and social links (LinkedIn, X, Instagram, Facebook, YouTube, TikTok). 5 domains free, then $0.004.",
+  "seoDescription": "Find emails from any website: email extractor + contact details scraper. Emails, phone numbers, WhatsApp, contact/impressum pages, LinkedIn, X, Instagram, TikTok. 5 free, then $0.004.",
+  "use_cases": [
+   "Extracting emails from a list of websites for outreach or link-building campaigns",
+   "Building guest-post and PR prospecting lists",
+   "Lead enrichment and CRM clean-up (append published emails, phone numbers and social profiles)",
+   "Finding company LinkedIn, X, Facebook, Instagram, YouTube and TikTok profiles from domain lists",
+   "Scraping phone numbers and WhatsApp contact links for sales outreach or dialer imports",
+   "Collecting impressum/imprint/contact pages for DACH (Germany/Austria/Switzerland) compliance or outreach research"
+  ],
+  "users": 3
+ },
+ "serp-intent-mapper": {
+  "title": "SERP Intent Mapper: Keyword Search Intent Classifier",
+  "description": "Bulk search intent classifier for keyword lists. Labels each keyword informational, commercial, transactional or navigational (+ local, question flags) and names the page type to build. English, Spanish, German, French, Portuguese, Italian, Arabic. First 100 free, then $0.50 per 1,000. No API key.",
+  "seoDescription": "Bulk search intent classifier: label keywords informational, commercial, transactional or navigational + page type. 7 languages. 100 free, then $0.0005/kw.",
+  "use_cases": [
+   "Plan site architecture and decide page formats before content creation.",
+   "Split keyword lists into SEO vs PPC groups and prioritize paid campaigns by intent.",
+   "Triage and prioritize large keyword inventories to select which terms need live SERP or volume lookups.",
+   "Extract FAQ-style question keywords for People Also Ask / FAQ content.",
+   "Identify which keywords need comparison pages versus guides or pricing/service pages.",
+   "Build topic clusters and content briefs by grouping keywords into two-word clusters and ranking by priority."
+  ],
+  "users": 2
+ },
+ "content-decay-audit": {
+  "title": "Content Decay Audit - Google Search Console Traffic Drop",
+  "description": "Content decay audit for Google Search Console: compare Pages exports (CSV, GSC ZIP, Excel or Google Sheets link, any language) and find pages losing traffic. Labels LOST, RANK_SLIP, DECAYING, CTR_DROP, ranked by clicks lost, with a content refresh plan. 25 pages free, then $0.001/page.",
+  "seoDescription": "Find content decay in Search Console exports (CSV, ZIP, Excel, Sheets): pages losing clicks labeled LOST, RANK_SLIP, CTR_DROP + refresh plan. 25 free.",
+  "use_cases": [
+   "Conduct content decay audits to find which pages lost Google search traffic.",
+   "Diagnose GSC traffic drops by separating failure modes: lost pages, rank slips, CTR drops, or shrinking demand.",
+   "Prioritize and plan content refreshes by ranking pages by estimated clicks lost and attaching targeted refresh actions.",
+   "Consolidate duplicate URL variants (tracking parameters, protocol/host variants, trailing slashes) so metrics are not split across entries.",
+   "Compare recent vs. prior periods (e.g., last 3 months vs previous 3 months or year-over-year) to identify trends and top losers.",
+   "Generate first-fix recommendations per failure mode (indexability/redirect/canonical checks for lost pages; content additions for rank slips; title/meta rewrites for CTR drops; retargeting or merging for decaying pages)."
+  ],
+  "users": 2
+ },
+ "website-tech-stack-detector": {
+  "title": "Tech Stack Detector, Pixel Checker & BuiltWith Alternative",
+  "description": "Tech stack detector, pixel checker and BuiltWith / Wappalyzer alternative for lead lists. Paste domains or emails; get CMS, Shopify, GA4, GTM tags, Meta/TikTok/LinkedIn pixels, tracking IDs, consent, chat, hosting with evidence. Parked & dead domains free. 3 free, then $0.0015/domain.",
+  "seoDescription": "Bulk tech stack lookup for lead lists: CMS, Shopify, GA4, GTM, Meta/TikTok pixels, tracking IDs, hosting. Flags parked domains. 3 free, $0.0015/domain.",
+  "use_cases": [
+   "Bulk lead generation and prospecting filtered by technology stack (e.g., find stores running a specific ecommerce platform with particular ad pixels).",
+   "Agency pitch preparation and competitor research to identify CMS, analytics, ad platforms and marketing tools used by target sites.",
+   "SEO and analytics audits that require site technology inventories and tracking identifiers (GA4, GTM, Meta Pixel, Google Ads IDs, etc.).",
+   "CRM enrichment and lead-list cleaning by detecting redirects, parked/for-sale domains and placeholder pages.",
+   "Discovering tags and pixels that are configured in Google Tag Manager but not present in page HTML.",
+   "Producing evidence-backed technology inventories (confidence scores and matching evidence) for marketing audits and tooling assessments."
+  ],
+  "users": 1
+ }
+}
