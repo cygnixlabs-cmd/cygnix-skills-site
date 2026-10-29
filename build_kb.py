@@ -74,7 +74,11 @@ def build_kb():
     A = "https://apify.com/cygnix_labs/"
     def tl(slug):
         it = next((x for x in feed_actors if x["slug"] == slug), None)
-        return [it["title"].split(":")[0].split(" - ")[0].strip(), it["url"]] if it else None
+        short = {"indexing-fix-planner": "Indexing Fix Planner", "content-decay-audit": "Content Decay Audit", "redirect-checker": "Redirect Checker",
+                 "site-seo-aeo-audit": "Website SEO + AEO Audit", "outreach-contact-finder": "Contact Details Scraper", "website-tech-stack-detector": "Tech Stack Detector",
+                 "brand-facts-checker": "Brand Facts Checker", "hashtag-research-strategy": "Hashtag Research", "keyword-clusterer-brief": "Keyword Clusterer + Briefs",
+                 "spam-backlink-triage": "Spam Backlink Triage", "keyword-cannibalization-finder": "Cannibalization Checker"}
+        return [short.get(slug) or it["title"].split(":")[0].strip(), it["url"]] if it else None
     for i in feed_actors:
         s = i["slug"]; d = ap.get(s, {}); who, tags = AUD.get(s, ("site owners and agencies", ["business"]))
         name = i["title"]
@@ -102,6 +106,7 @@ def build_kb():
                    "aud": aud, "pkg": label})
     for src, page in ((home_src, "index.html#faq"), (price_src, "pricing.html#faq")):
         for q, a in faqs_of(src):
+            if any(x["kind"] == "faq" and x["title"] == _strip(q) for x in kb): continue
             kb.append({"id": "faq:" + re.sub(r"\W+", "-", _strip(q).lower())[:50], "kind": "faq", "title": _strip(q), "a": e(_strip(a)), "link": page, "cta": "Read the FAQ", "kw": "", "aud": []})
 
     def T(id, title, kw, a, tools=(), aud=(), pkg=None, link=None, cta=None):
@@ -119,7 +124,7 @@ def build_kb():
     T("redirects", "Broken redirects or a site move", "redirect redirects 301 302 migration migrate moved move new domain 404 broken links",
       "<b>Redirect Checker</b> traces every hop and flags chains, loops, 404s and soft 404s, and it checks your old-to-new redirect map after a migration. If you'd rather we fix it, the <b>Fix Sprint ($299)</b> covers the top issues with a recheck.",
       ["redirect-checker"], ["store", "business", "agency"], "Fix Sprint — $299")
-    T("ai", "AI tools don't mention me", "ai chatgpt gpt perplexity gemini claude llm aeo geo overviews cite cited mention recommend answers visibility",
+    T("ai", "ChatGPT and AI answers don't mention me", "ai chatgpt gpt perplexity gemini claude llm aeo geo overviews cite cited mention recommend answers visibility",
       "To get cited by ChatGPT, Perplexity and Google AI Overviews, AI tools need to read your pages and trust your brand facts. <b>AEO Checker</b> scores each page 0–100, and <b>Brand Facts Checker</b> finds facts your own site contradicts.",
       ["aeo-readiness-checker", "brand-facts-checker"], ["business", "agency"], "Free site check")
     T("aeo", "What is AEO?", "what is aeo geo answer engine optimization meaning explain",
@@ -152,6 +157,9 @@ def build_kb():
     T("store", "Online store / e-commerce", "store shop online ecommerce e-commerce retail shopify woocommerce products product category pages",
       "For online stores we get product and category pages indexed, keep redirects clean and catch drops early. Before or after a site move, a <b>Fix Sprint ($299)</b> fixes the top issues and rechecks them.",
       ["indexing-fix-planner", "redirect-checker", "content-decay-audit"], ["store"], "Free site check", "pricing.html#oneoff", "See audits and Fix Sprint")
+    T("grow", "I want more customers from my website", "more customers clients leads sales visitors enquiries bookings grow business growth marketing found",
+      "More customers from search starts with being found: your key pages indexed on Google, and clear enough for ChatGPT and AI Overviews to cite. We check that first and show you what is holding the site back. The <b>free site check</b> is the easiest start, or book a free 15-minute consultation to talk it through.",
+      ["site-seo-aeo-audit", "aeo-readiness-checker"], ["business", "store"], "Free site check")
     T("audit", "Not sure, check my whole site", "audit check whole site everything not sure help seo website review analyse analyze health",
       "Start with a full check. <b>Website SEO + AEO Audit</b> crawls your site and scores every page 0–100, covering meta tags, broken links, schema, llms.txt and AI readiness. Or we run it for you with the <b>free site check</b>.",
       ["site-seo-aeo-audit"], ["business", "store", "agency"], "Free site check")
@@ -173,7 +181,7 @@ def build_kb():
     T("diy", "Can I run the tools myself?", "myself diy run tools self serve apify account api use actors",
       "Yes. Our actors are public on Apify, where you pay per use, and our skills are on Agensi for AI agents. Every tool card on the home page links to the real listing.",
       [], [], None, "https://apify.com/cygnix_labs", "All our Apify actors")
-    T("actors", "List your tools", "list all tools actors apify catalogue catalog what do you sell products offer",
+    T("actors", "List your tools", "list all tools actors apify catalogue catalog products offer",
       "Our Apify actors: " + ", ".join(f'<a href="{e(i["url"])}" target="_blank" rel="noopener">{e(i["title"].split(":")[0])}</a>' for i in feed_actors) + ".",
       [], [], None, "index.html#tools", "Browse the tools")
     T("skills", "Agensi skills for AI agents", "agensi skill skills ai agent claude cursor codex prompt bundle",
