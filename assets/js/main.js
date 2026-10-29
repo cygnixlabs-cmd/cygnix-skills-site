@@ -11,7 +11,8 @@ function webgl(){try{var c=document.createElement('canvas');return !!(window.Web
 var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 var small=matchMedia('(max-width: 760px)').matches;
 var lowMem=navigator.deviceMemory&&navigator.deviceMemory<3;
-if(!reduce&&!small&&!lowMem&&webgl()){
+if(!document.getElementById('scene')){root.classList.add('no3d');}
+else if(!reduce&&!small&&!lowMem&&webgl()){
   var start=function(){var s=document.createElement('script');s.type='module';s.src='assets/js/scene.js';s.onerror=function(){root.classList.add('no3d');};document.body.appendChild(s);};
   if('requestIdleCallback' in window)requestIdleCallback(start,{timeout:1200});else setTimeout(start,300);
 }else{root.classList.add('no3d');}
@@ -51,11 +52,13 @@ function send(data){data._template='table';data._captcha='false';
 var form=document.getElementById('contact-form');
 function prefill(pkg,msg){if(!form)return;var s=form.querySelector('[name=package]');if(s&&pkg){s.value=pkg;}var m=form.querySelector('[name=message]');if(m&&msg&&!m.value)m.value=msg;}
 document.querySelectorAll('[data-package]').forEach(function(b){b.addEventListener('click',function(){prefill(b.dataset.package,b.dataset.msg||'');});});
+/* ?package=… preselects a package (for links in emails and DMs) */
+try{var qp=new URLSearchParams(location.search).get('package');if(qp&&form){var sel=form.querySelector('[name=package]');if(sel&&[].some.call(sel.options,function(o){return o.value===qp;}))prefill(qp,'');}}catch(e){}
 if(form){form.addEventListener('submit',function(e){e.preventDefault();var st=form.querySelector('.status');
  if(form.querySelector('[name=_honey]').value)return;
  var fd=new FormData(form),d={};fd.forEach(function(v,k){d[k]=v;});d._subject='Cygnix site: '+(d.package||'enquiry')+' — '+(d.name||'');d._replyto=d.email;
  st.className='status';st.textContent='Sending…';var btn=form.querySelector('button[type=submit]');btn.disabled=true;
- send(d).then(function(){st.className='status ok';st.textContent='Thanks! Your message reached the Cygnix team. We reply by email, usually within 1–2 business days.';form.reset();})
+ send(d).then(function(){st.className='status ok';st.textContent='Thanks! Your message reached the Cygnix team. We reply by email, usually within 1–2 business days'+(/\$/.test(d.package||'')?', with the scope and an invoice.':'.');form.reset();})
  .catch(function(){st.className='status err';st.innerHTML='Could not send right now. Please email <a href="mailto:cygnixlabs@gmail.com">cygnixlabs@gmail.com</a>.';})
  .then(function(){btn.disabled=false;});});}
 
@@ -87,8 +90,8 @@ var INTENTS=[
   say:'<b>Keyword Clusterer</b> groups your keywords into topics with content briefs, <b>SERP Intent Mapper</b> tells you which page type to build, and <b>Cannibalization Checker</b> finds pages competing for the same keyword.',
   tools:[['Keyword Clusterer + Briefs',A+'keyword-clusterer-brief'],['SERP Intent Mapper',A+'serp-intent-mapper'],['Cannibalization Checker',A+'keyword-cannibalization-finder']]},
  {k:'agency',label:'I’m an agency (many client sites)',re:/agency|client|white.?label|resell/i,
-  say:'Our <b>Agency plan ($99/mo)</b> covers 5 client sites with white-label reports, and you can run any of our Apify actors across your client list. Leads tools: <b>Contact Finder</b> and <b>Tech Stack Detector</b>.',
-  tools:[['Contact Details Scraper',A+'outreach-contact-finder'],['Tech Stack Detector',A+'website-tech-stack-detector']],pkg:'Agency — $99/mo (5 white-label sites)'},
+  say:'Agencies usually start with a <b>white-label AI visibility audit</b>: <b>$99</b> per client site, or <b>4 for $299</b>, with your logo and no Cygnix branding. Ask for a free sample first. For ongoing work, the <b>Agency plan ($99/mo)</b> covers 5 client sites. You can also run our Apify actors across your client list yourself.',
+  tools:[['Contact Details Scraper',A+'outreach-contact-finder'],['Tech Stack Detector',A+'website-tech-stack-detector']],pkg:'Free sample audit (agencies)'},
  {k:'audit',label:'Not sure, check my whole site',re:/audit|check|whole|everything|not sure|help|seo|rank/i,
   say:'Start with a full check. <b>Website SEO + AEO Audit</b> crawls your site and scores every page 0–100, covering meta tags, broken links, schema, llms.txt and AI readiness. Or we can run it for you with the free site check.',
   tools:[['Website SEO + AEO Audit',A+'site-seo-aeo-audit']],pkg:'Free site check'}
@@ -100,7 +103,7 @@ function chips(list){var w=document.createElement('div');w.className='chips';lis
 function menu(){chips(INTENTS.map(function(it){return {label:it.label,fn:function(){pick(it,it.label);}};}));}
 function pick(it,text){add(esc(text),'me');lastIntent=it;
  setTimeout(function(){add(it.say);add('Try it: '+it.tools.map(function(t){return '<a href="'+t[1]+'" target="_blank" rel="noopener">'+t[0]+' →</a>';}).join('<br>'));
-  chips([{label:'Send this to the Cygnix team',fn:handoff},{label:'See packages',fn:function(){location.hash='packages';}},{label:'Another problem',fn:menu}]);},250);}
+  chips([{label:'Send this to the Cygnix team',fn:handoff},{label:'See packages and pricing',fn:function(){location.href=/pricing\.html/.test(location.pathname)?'#agencies':'pricing.html';}},{label:'Another problem',fn:menu}]);},250);}
 function handoff(){add('Send this to the Cygnix team','me');
  var f=document.createElement('form');f.className='mini msg bot';f.innerHTML='<span>Leave your details and we’ll reply by email with next steps.</span><input name="email" type="email" required placeholder="Your email" autocomplete="email"><input name="site" type="text" placeholder="Your website (optional)" autocomplete="url"><button class="btn btn-p btn-sm" type="submit">Send to the team</button>';
  body.appendChild(f);body.scrollTop=body.scrollHeight;f.querySelector('input').focus();
