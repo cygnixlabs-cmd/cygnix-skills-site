@@ -11,8 +11,8 @@ rsync -a --exclude '.git' --exclude 'shot-*.png' --exclude '*.mp4' --exclude 'te
 touch "$OUT/.nojekyll"
 if [ "$(gh api repos/$REPO/pages --jq .cname 2>/dev/null || true)" = "skills.cygnixlabs.com" ]; then cp CNAME "$OUT/CNAME"; fi
 cd "$OUT"; git init -q -b gh-pages; git add -A
-git -c user.name="Cygnix Labs" -c user.email="cygnixlabs@gmail.com" commit -qm "Deploy $(date -u +%FT%TZ)"
+git -c user.name="Cygnix Labs" -c user.email="info@cygnixlabs.com" commit -qm "Deploy $(date -u +%FT%TZ)"
 git remote add origin "https://github.com/$REPO.git"
-git fetch -q origin gh-pages 2>/dev/null && git reset -q --soft origin/gh-pages && git -c user.name="Cygnix Labs" -c user.email="cygnixlabs@gmail.com" commit -qm "Deploy $(date -u +%FT%TZ)" || true
+git fetch -q origin gh-pages 2>/dev/null && git reset -q --soft origin/gh-pages && git -c user.name="Cygnix Labs" -c user.email="info@cygnixlabs.com" commit -qm "Deploy $(date -u +%FT%TZ)" || true
 git push -q origin gh-pages
 echo "deployed"

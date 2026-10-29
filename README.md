@@ -15,10 +15,11 @@ A two-page, 3D site (home `index.html` + `pricing.html`) for Cygnix Labs SEO + A
 - The excluded actor slugs (`EXCLUDE`) in both `build.py` and `main.js` keep other projects' actors off the site.
 
 ## Forms (no backend)
-Both the contact form and "Send this to the Cygnix team" in the chat post to FormSubmit:
-`https://formsubmit.co/ajax/cygnixlabs@gmail.com`
-- **First-time activation:** the first submission sends an activation email to cygnixlabs@gmail.com. Click "Activate form" once, and later messages arrive normally.
-- **Switching to info@cygnixlabs.com:** when that inbox is live, change `FORM_ENDPOINT` in `assets/js/main.js` and `EMAIL` in `build.py`, replace the visible mailto links in `template.html`, then run `python3 build.py`. Activate the form again from the new inbox.
+Public contact is **info@cygnixlabs.com** and **+965 5178 5758** only (set in `build.py` as `EMAIL`/`PHONE`, used via `{{EMAIL}}`, `{{PHONE}}`, `{{TEL}}` in the templates).
+- FormSubmit shut down (formsubmit.co returns 521; formsubmit.io announced the shutdown for 15 July 2026), so it is no longer used.
+- Backend: [Formgong](https://formgong.com) free plan (1,000 submissions a month, an email to info@ for each one). Put the public `fk_…` access key in `FORM_KEY` at the top of `assets/js/main.js` and redeploy. Getting the key needs one Cloudflare check on formgong.com (enter info@cygnixlabs.com under "Get an access key"); the key arrives in info@.
+- While `FORM_KEY` is empty, the contact form and the chat handoff open the visitor's email app with the message addressed to info@cygnixlabs.com.
+- `?package=consultation` (also `free-check`, `sample`, or any exact package name) preselects the package. The "Book a free 15-min consultation" buttons use it.
 
 ## Deploy
 - `main` holds the source. `./deploy.sh` builds the site and publishes it to the `gh-pages` branch, which GitHub Pages serves.

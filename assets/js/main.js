@@ -1,6 +1,10 @@
 (function(){
 'use strict';
-var FORM_ENDPOINT='https://formsubmit.co/ajax/cygnixlabs@gmail.com';
+var CONTACT_EMAIL='info@cygnixlabs.com';
+/* Form backend: Formgong (free, emails each submission to info@). Paste the public fk_ access key below.
+   While it is empty, the forms open the visitor's email app with the message addressed to info@ (no backend needed). */
+var FORM_KEY='';
+var FORM_ENDPOINT='https://formgong.com/submit';
 var FEED_LOCAL='feed/cygnix-listings.json';
 var FEED_REMOTE='https://raw.githubusercontent.com/cygnixlabs-cmd/cygnix-seo-skills/main/feed/cygnix-listings.json';
 var EXCLUDE=['cygnix-instagram-export-cleaner','cygnix-storefront-release-proof'];
@@ -47,19 +51,25 @@ if(grid){load(FEED_LOCAL).then(use).catch(function(){}).then(function(){return l
  if(moreBtn)moreBtn.addEventListener('click',function(){showAll=true;swap();});}
 
 /* ---------- forms ---------- */
-function send(data){data._template='table';data._captcha='false';
- return fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)}).then(function(r){return r.json().catch(function(){return {};}).then(function(j){if(!r.ok||j.success==='false'||j.success===false)throw new Error(j.message||'send failed');return j;});});}
+function mailtoSend(data){var subj=data._subject||'Cygnix site enquiry';var skip={_subject:1,_replyto:1,_template:1,_captcha:1,_honey:1,botcheck:1,access_key:1,_lang:1};
+ var lines=[];Object.keys(data).forEach(function(k){if(!skip[k]&&data[k])lines.push(k.charAt(0).toUpperCase()+k.slice(1)+': '+data[k]);});
+ location.href='mailto:'+CONTACT_EMAIL+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(lines.join('\n'));return Promise.resolve({mailto:true});}
+function send(data){if(!FORM_KEY)return mailtoSend(data);
+ var fd=new FormData();fd.append('access_key',FORM_KEY);fd.append('_lang','en');Object.keys(data).forEach(function(k){if(k!=='_honey')fd.append(k,data[k]);});
+ return fetch(FORM_ENDPOINT,{method:'POST',headers:{'Accept':'application/json'},body:fd}).then(function(r){return r.json().catch(function(){return {};}).then(function(j){if(!r.ok||j.success!==true)throw new Error(j.message||j.code||'send failed');return j;});});}
 var form=document.getElementById('contact-form');
 function prefill(pkg,msg){if(!form)return;var s=form.querySelector('[name=package]');if(s&&pkg){s.value=pkg;}var m=form.querySelector('[name=message]');if(m&&msg&&!m.value)m.value=msg;}
-document.querySelectorAll('[data-package]').forEach(function(b){b.addEventListener('click',function(){prefill(b.dataset.package,b.dataset.msg||'');});});
+document.querySelectorAll('[data-package]').forEach(function(b){b.addEventListener('click',function(ev){prefill(b.dataset.package,b.dataset.msg||'');
+ var h=b.getAttribute('href')||'';if(form&&h.charAt(0)==='?'){ev.preventDefault();try{history.replaceState(null,'',h);}catch(x){}var c=document.getElementById('contact');if(c)c.scrollIntoView({behavior:reduce?'auto':'smooth'});var n=form.querySelector('[name=name]');if(n)setTimeout(function(){n.focus({preventScroll:true});},600);}});});
 /* ?package=… preselects a package (for links in emails and DMs) */
-try{var qp=new URLSearchParams(location.search).get('package');if(qp&&form){var sel=form.querySelector('[name=package]');if(sel&&[].some.call(sel.options,function(o){return o.value===qp;}))prefill(qp,'');}}catch(e){}
+var ALIAS={consultation:'Free 15-min consultation','free-check':'Free site check',sample:'Free sample audit (agencies)'};
+try{var qp=new URLSearchParams(location.search).get('package');if(qp&&ALIAS[qp.toLowerCase()])qp=ALIAS[qp.toLowerCase()];if(qp&&form){var sel=form.querySelector('[name=package]');if(sel&&[].some.call(sel.options,function(o){return o.value===qp;}))prefill(qp,'');}}catch(e){}
 if(form){form.addEventListener('submit',function(e){e.preventDefault();var st=form.querySelector('.status');
  if(form.querySelector('[name=_honey]').value)return;
  var fd=new FormData(form),d={};fd.forEach(function(v,k){d[k]=v;});d._subject='Cygnix site: '+(d.package||'enquiry')+' — '+(d.name||'');d._replyto=d.email;
  st.className='status';st.textContent='Sending…';var btn=form.querySelector('button[type=submit]');btn.disabled=true;
- send(d).then(function(){st.className='status ok';st.textContent='Thanks! Your message reached the Cygnix team. We reply by email, usually within 1–2 business days'+(/\$/.test(d.package||'')?', with the scope and an invoice.':'.');form.reset();})
- .catch(function(){st.className='status err';st.innerHTML='Could not send right now. Please email <a href="mailto:cygnixlabs@gmail.com">cygnixlabs@gmail.com</a>.';})
+ send(d).then(function(j){st.className='status ok';if(j&&j.mailto){st.innerHTML='Your email app should open with this message addressed to <a href="mailto:'+CONTACT_EMAIL+'">'+CONTACT_EMAIL+'</a>. Press Send there and we reply within 1–2 business days.';return;}st.textContent='Thanks! Your message reached the Cygnix team. We reply by email, usually within 1–2 business days'+(/\$/.test(d.package||'')?', with the scope and an invoice.':'.');form.reset();})
+ .catch(function(){st.className='status err';st.innerHTML='Could not send right now. Please email <a href="mailto:info@cygnixlabs.com">info@cygnixlabs.com</a> or call <a href="tel:+96551785758">+965 5178 5758</a>.';})
  .then(function(){btn.disabled=false;});});}
 
 /* ---------- Talk to us: guided assistant ---------- */
@@ -109,8 +119,8 @@ function handoff(){add('Send this to the Cygnix team','me');
  body.appendChild(f);body.scrollTop=body.scrollHeight;f.querySelector('input').focus();
  f.addEventListener('submit',function(e){e.preventDefault();var b=f.querySelector('button');b.disabled=true;b.textContent='Sending…';
   send({_subject:'Cygnix site chat: '+(lastIntent?lastIntent.label:'enquiry'),email:f.email.value,_replyto:f.email.value,website:f.site.value,package:(lastIntent&&lastIntent.pkg)||'Talk to us (chat)',problem:lastIntent?lastIntent.label:'',transcript:log.join('\n')})
-  .then(function(){f.remove();add('Sent ✓ The Cygnix team will reply to <b>'+esc(f.email.value)+'</b> by email.');})
-  .catch(function(){b.disabled=false;b.textContent='Send to the team';add('That didn’t go through. Please email <a href="mailto:cygnixlabs@gmail.com">cygnixlabs@gmail.com</a>.');});});}
+  .then(function(j){f.remove();add(j&&j.mailto?'Your email app should open with this chat addressed to <a href="mailto:info@cygnixlabs.com">info@cygnixlabs.com</a>. Press Send there and we reply by email.':'Sent ✓ The Cygnix team will reply to <b>'+esc(f.email.value)+'</b> by email.');})
+  .catch(function(){b.disabled=false;b.textContent='Send to the team';add('That didn’t go through. Please email <a href="mailto:info@cygnixlabs.com">info@cygnixlabs.com</a>.');});});}
 function openChat(){if(!chat)return;chat.classList.add('open');document.getElementById('chat-fab').setAttribute('aria-expanded','true');
  if(!body.children.length){add('Hi! I’m the Cygnix guide. Tell me what’s wrong with your site and I’ll point you to the right tool. <br><small style="color:#94A3B8">This is an automated guide. If you send us your chat, the Cygnix team replies by email.</small>');menu();}
  setTimeout(function(){input&&input.focus();},50);}

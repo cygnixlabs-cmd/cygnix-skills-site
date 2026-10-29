@@ -7,7 +7,9 @@ ROOT = pathlib.Path(__file__).parent
 SITE = "https://skills.cygnixlabs.com"
 FEED_URL = "https://raw.githubusercontent.com/cygnixlabs-cmd/cygnix-seo-skills/main/feed/cygnix-listings.json"
 EXCLUDE = {"cygnix-instagram-export-cleaner", "cygnix-storefront-release-proof"}
-EMAIL = "cygnixlabs@gmail.com"   # switch to info@cygnixlabs.com when that inbox is live
+EMAIL = "info@cygnixlabs.com"   # the only public contact address
+PHONE = "+965 5178 5758"
+TEL = "+96551785758"
 
 if "--fetch" in sys.argv:
     try:
@@ -39,7 +41,8 @@ org = {"@type": "Organization", "@id": SITE + "/#org", "name": "Cygnix Labs", "u
        "sameAs": ["https://x.com/Cygnixlabs", "https://www.linkedin.com/company/cygnix-labs", "https://www.instagram.com/cygnix.labs/",
                   "https://apify.com/cygnix_labs", "https://agensi.io/creators/cygnix-labs", "https://cygnixlabs.gumroad.com/",
                   "https://github.com/cygnixlabs-cmd"],
-       "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": EMAIL, "availableLanguage": ["English"]}}
+       "telephone": TEL, "address": {"@type": "PostalAddress", "streetAddress": "Floor 1, Office 48, Al Rehab Complex, Tunisia Street", "addressLocality": "Hawalli", "addressCountry": "KW"},
+       "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": EMAIL, "telephone": TEL, "availableLanguage": ["English", "Arabic"]}}
 website = {"@type": "WebSite", "@id": SITE + "/#site", "url": SITE + "/", "name": "Cygnix Labs", "publisher": {"@id": SITE + "/#org"}}
 # ---- packages: single source for pricing JSON-LD, llms.txt and the contact form options ----
 # Payment copy lives here so it is easy to swap when a payment method (PayPal, Wise, bank) is chosen.
@@ -58,7 +61,7 @@ packs = [("White-label audit — $99", "White-label AI visibility audit", "99", 
          ("Quick Audit — $79", "Quick Audit", "79", "Key pages of one site: indexing, meta, schema, AI readiness and a fix list.", None, "oneoff"),
          ("Full Audit — $199", "Full Audit", "199", "Whole-site SEO + AEO audit with redirects, internal links, backlinks and content decay.", None, "oneoff"),
          ("Fix Sprint — $299", "Fix Sprint", "299", "We fix the top issues from your audit, recheck and resubmit the pages to Google.", None, "oneoff")]
-FORM_OPTIONS = ["Free site check", "Free sample audit (agencies)"] + [p[0] for p in packs] + ["Talk to us (chat)", "Just a question"]
+FORM_OPTIONS = ["Free 15-min consultation", "Free site check", "Free sample audit (agencies)"] + [p[0] for p in packs] + ["Talk to us (chat)", "Just a question"]
 def offer(label, n, p, d, unit, anchor):
     o = {"@type": "Offer", "name": n, "description": d, "price": p, "priceCurrency": "USD", "url": f"{PRICING}#{anchor}",
          "availability": "https://schema.org/InStock", "seller": {"@id": SITE + "/#org"}}
@@ -92,7 +95,7 @@ def ld(graph):
 now = datetime.date.today().isoformat()
 opts = "".join(f"<option>{e(o)}</option>" for o in FORM_OPTIONS)
 def fill(src):
-    return (src.replace("{{PAY_NOTE}}", e(PAY_NOTE)).replace("{{PAY_SHORT}}", e(PAY_SHORT)).replace("{{PAY_LEAD}}", e(PAY_LEAD)).replace("{{BOOK}}", e(BOOK))
+    return (src.replace("{{EMAIL}}", EMAIL).replace("{{PHONE}}", PHONE).replace("{{TEL}}", TEL).replace("{{PAY_NOTE}}", e(PAY_NOTE)).replace("{{PAY_SHORT}}", e(PAY_SHORT)).replace("{{PAY_LEAD}}", e(PAY_LEAD)).replace("{{BOOK}}", e(BOOK))
                .replace("{{PACKAGE_OPTIONS}}", opts).replace("{{SITE}}", SITE).replace("{{TOOL_CARDS}}", "".join(card(i) for i in actors))
                .replace("{{UPDATED}}", f'{feed.get("updated", now)} · {len(items)} live tools and skills').replace("{{YEAR}}", str(datetime.date.today().year))
                .replace("{{V}}", datetime.datetime.now().strftime("%Y%m%d%H%M")))
@@ -107,7 +110,7 @@ price_page = {"@type": "WebPage", "@id": PRICING + "#page", "url": PRICING, "nam
 (ROOT / "pricing.html").write_text(price_src.replace("{{JSONLD}}", ld([org, website, price_page, service, faq_ld(price_src, PRICING)])))
 
 L = ["# Cygnix Labs", "", "> Cygnix Labs builds SEO and AEO (answer engine optimization) tools and fixes websites that are not showing on Google or in AI answers such as ChatGPT, Perplexity and Google AI Overviews. Every job follows three steps: the problem, a proof report from a real tool run, and the fix.", "",
-     f"Contact: {EMAIL} · Site: {SITE}/ · Pricing: {PRICING} · Free site check: {SITE}/#contact", "",
+     f"Contact: {EMAIL} · Phone: {PHONE} · Site: {SITE}/ · Pricing: {PRICING} · Book a free 15-min consultation: {SITE}/?package=consultation#contact", "",
      "## Packages and pricing", "", f"Full pricing: {PRICING}. {PAY_NOTE}", ""] + [f"- {n}: ${p}{'/month' if u else ' one-time'}. {d}" for _, n, p, d, u, _a in packs] + [
      "", "## Apify actors (run in the cloud, pay per use)", ""] + [f"- [{i['title']}]({i['url']}): {i.get('short_description','')} Price: {i.get('price','')}." for i in actors] + [
      "", "## Agensi skills for AI agents", ""] + [f"- [{i['title']}]({i['url']}): {i.get('short_description','')} Price: {i.get('price','')}." for i in skills] + [
@@ -119,3 +122,4 @@ L = ["# Cygnix Labs", "", "> Cygnix Labs builds SEO and AEO (answer engine optim
     f'<url><loc>{SITE}/llms.txt</loc><lastmod>{now}</lastmod></url>\n</urlset>\n')
 (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\n# AI crawlers welcome\nUser-agent: GPTBot\nAllow: /\nUser-agent: OAI-SearchBot\nAllow: /\nUser-agent: ChatGPT-User\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
 print(f"built: {len(actors)} actors, {len(skills)} skills, {len(faqs)} faqs")
+exec((ROOT / "build_kb.py").read_text())  # chat assistant knowledge base -> assets/kb.json
