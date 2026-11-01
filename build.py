@@ -43,7 +43,7 @@ org = {"@type": "Organization", "@id": SITE + "/#org", "name": "Cygnix Labs", "u
                   "https://apify.com/cygnix_labs", "https://agensi.io/creators/cygnix-labs", "https://cygnixlabs.gumroad.com/",
                   "https://github.com/cygnixlabs-cmd"],
        "telephone": TEL, "address": {"@type": "PostalAddress", "streetAddress": "Floor 1, Office 48, Al Rehab Complex, Tunisia Street", "addressLocality": "Hawalli", "addressCountry": "KW"},
-       "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": EMAIL, "telephone": TEL, "availableLanguage": ["English", "Arabic"]}}
+       "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": EMAIL, "telephone": TEL, "availableLanguage": ["English"]}}
 AREAS_SERVED = [{"@type": "Country", "name": c} for c in ["Kuwait", "Saudi Arabia", "United Arab Emirates", "Qatar", "Bahrain", "Oman", "United Kingdom", "United States", "Canada", "Australia"]]
 org["description"] = "Cygnix Labs is a done-for-you SEO and AEO (AI search) team. We fix websites that customers can't find on Google, Google Maps or in AI answers such as ChatGPT: free audit, a ranked Fix Queue, and every fix QA-checked."
 pro = {"@type": "ProfessionalService", "@id": SITE + "/#business", "name": "Cygnix Labs", "url": SITE + "/", "image": SITE + "/assets/img/og.jpg", "logo": SITE + "/apple-touch-icon.png",
