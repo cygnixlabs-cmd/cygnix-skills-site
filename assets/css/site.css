@@ -279,3 +279,22 @@ main>section{overflow-x:clip}html{overflow-x:clip}
 .steps>*,.finds>*,.proc>*,.wl>*,.paysteps>*,.plans>*,.oneoff>*{min-width:0}
 @media (max-width:400px){.nav .wrap{gap:10px;padding:0 14px}.nav .btn-sm{padding:7px 11px;font-size:12px}.logo svg{width:22px;height:22px}.mlink{font-size:13px}}
 .find h3{padding-right:54px}
+/* problem pages (problems.html + /<problem>.html) */
+.crumbs{font-size:13px;color:var(--muted);margin:0 0 14px}.crumbs a{color:var(--cyan2)}
+.pcheck{max-width:460px;justify-self:end;width:100%}
+.pcheck .chk i{color:var(--amber)}
+.prose{max-width:820px;margin:0 auto;padding:26px 30px;font-size:16.5px;color:#E2E8F0}
+.prose p{margin:0 0 14px}.prose p:last-child{margin-bottom:0}
+.prose h3{margin:0 0 10px;font-size:18px}
+.prose ul{margin:0 0 12px;padding-left:20px}.prose li{margin:6px 0}
+.prose .small{font-size:13.5px;color:var(--muted)}
+#process .prose{margin-top:28px}
+.checklist{max-width:820px;margin:0 auto;padding:22px 28px;list-style:none}
+.checklist li{padding:9px 0 9px 32px;position:relative;font-size:16px;color:#E2E8F0;border-bottom:1px solid var(--line)}
+.checklist li:last-child{border-bottom:0}
+.checklist li:before{content:"";position:absolute;left:2px;top:13px;width:16px;height:16px;border:2px solid var(--cyan);border-radius:4px}
+.gulf{max-width:900px;margin:26px auto 0;padding:20px 24px;border-color:rgba(52,211,153,.4)}
+.gulf h3{margin:0 0 6px;font-size:17px;color:var(--green)}.gulf p{margin:0;color:#CBD5E1;font-size:15px}
+a.find{display:block;color:var(--text)}a.find:hover{text-decoration:none;border-color:var(--cyan)}
+.finds .find p:only-of-type{margin-bottom:0}
+@media (max-width:980px){.pcheck{justify-self:stretch;max-width:none}.prose,.checklist{padding:18px 18px}}
