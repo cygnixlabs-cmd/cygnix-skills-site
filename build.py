@@ -44,6 +44,19 @@ org = {"@type": "Organization", "@id": SITE + "/#org", "name": "Cygnix Labs", "u
                   "https://github.com/cygnixlabs-cmd"],
        "telephone": TEL, "address": {"@type": "PostalAddress", "streetAddress": "Floor 1, Office 48, Al Rehab Complex, Tunisia Street", "addressLocality": "Hawalli", "addressCountry": "KW"},
        "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": EMAIL, "telephone": TEL, "availableLanguage": ["English", "Arabic"]}}
+AREAS_SERVED = [{"@type": "Country", "name": c} for c in ["Kuwait", "Saudi Arabia", "United Arab Emirates", "Qatar", "Bahrain", "Oman", "United Kingdom", "United States", "Canada", "Australia"]]
+org["description"] = "Cygnix Labs is a done-for-you SEO and AEO (AI search) team. We fix websites that customers can't find on Google, Google Maps or in AI answers such as ChatGPT: free audit, a ranked Fix Queue, and every fix QA-checked."
+pro = {"@type": "ProfessionalService", "@id": SITE + "/#business", "name": "Cygnix Labs", "url": SITE + "/", "image": SITE + "/assets/img/og.jpg", "logo": SITE + "/apple-touch-icon.png",
+       "description": "Done-for-you SEO and AEO (answer engine optimization) service by a specialist team: free first audit, a Fix Queue of up to 15 priorities (P0-P3), client approval, specialist fixes, an independent QA check of every fix, and plain-English reports.",
+       "email": EMAIL, "telephone": TEL, "address": org["address"], "areaServed": AREAS_SERVED, "parentOrganization": {"@id": SITE + "/#org"},
+       "knowsAbout": ["Search engine optimization", "Answer engine optimization", "Generative engine optimization", "Local SEO", "Google Business Profile", "Technical SEO", "Schema markup"],
+       "knowsLanguage": ["en", "ar"],
+       "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Done-for-you SEO + AEO service", "itemListElement": [
+           {"@type": "Offer", "name": "Free first audit", "price": "0", "priceCurrency": "USD", "url": SITE + "/#contact", "itemOffered": {"@type": "Service", "name": "Free SEO + AEO audit with a Fix Queue of up to 15 priorities"}}] + [
+           {"@type": "Offer", "name": n, "url": SITE + "/#service", "itemOffered": {"@type": "Service", "name": n + " (done-for-you SEO + AEO)", "description": d}} for n, d in [
+           ("Foundation", "One site, one location: business facts, indexing, broken links and redirects, monthly Fix Queue work, AI-answer check, monthly report."),
+           ("Growth", "Several locations or a small store: more monthly fixes, page improvements, monthly AI-answer checks, weekly updates."),
+           ("Authority", "Multi-location or large catalogues: largest fix allowance, competitor AI-answer tracking, authority work, monthly review call.")]]}}
 website = {"@type": "WebSite", "@id": SITE + "/#site", "url": SITE + "/", "name": "Cygnix Labs", "publisher": {"@id": SITE + "/#org"}}
 # ---- packages: single source for pricing JSON-LD, llms.txt and the contact form options ----
 # Payment copy lives here so it is easy to swap when a payment method (PayPal, Wise, bank) is chosen.
@@ -62,7 +75,7 @@ packs = [("White-label audit — $99", "White-label AI visibility audit", "99", 
          ("Quick Audit — $79", "Quick Audit", "79", "Key pages of one site: indexing, meta, schema, AI readiness and a fix list.", None, "oneoff"),
          ("Full Audit — $199", "Full Audit", "199", "Whole-site SEO + AEO audit with redirects, internal links, backlinks and content decay.", None, "oneoff"),
          ("Fix Sprint — $299", "Fix Sprint", "299", "We fix the top issues from your audit, recheck and resubmit the pages to Google.", None, "oneoff")]
-FORM_OPTIONS = ["Free 15-min consultation", "Free site check", "Free sample audit (agencies)"] + [p[0] for p in packs] + ["Talk to us (chat)", "Just a question"]
+FORM_OPTIONS = ["Free 15-min consultation", "Free audit", "Free sample audit (agencies)"] + [p[0] for p in packs] + ["Talk to us (chat)", "Just a question"]
 def offer(label, n, p, d, unit, anchor):
     o = {"@type": "Offer", "name": n, "description": d, "price": p, "priceCurrency": "USD", "url": f"{PRICING}#{anchor}",
          "availability": "https://schema.org/InStock", "seller": {"@id": SITE + "/#org"}}
@@ -70,7 +83,7 @@ def offer(label, n, p, d, unit, anchor):
     if "4-pack" in label: o["eligibleQuantity"] = {"@type": "QuantitativeValue", "value": 4, "unitText": "audits"}
     return o
 service = {"@type": "Service", "@id": SITE + "/#service", "name": "SEO and AEO audits, monitoring and fixes", "provider": {"@id": SITE + "/#org"},
-           "serviceType": "Search engine optimization and answer engine optimization", "areaServed": "Worldwide", "url": PRICING,
+           "serviceType": "Search engine optimization and answer engine optimization", "areaServed": AREAS_SERVED, "url": PRICING,
            "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Cygnix Labs packages", "url": PRICING, "itemListElement": [offer(*x) for x in packs]}}
 apps = []
 for i in actors:
@@ -108,15 +121,17 @@ crumbs = {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "
           {"@type": "ListItem", "position": 2, "name": "Pricing", "item": PRICING}]}
 price_page = {"@type": "WebPage", "@id": PRICING + "#page", "url": PRICING, "name": "Pricing and packages | Cygnix Labs", "isPartOf": {"@id": SITE + "/#site"},
               "about": {"@id": SITE + "/#service"}, "breadcrumb": crumbs}
-(ROOT / "index.html").write_text(home_src.replace("{{JSONLD}}", ld([org, website, service, itemlist, faq_ld(home_src, SITE + "/")])))
+(ROOT / "index.html").write_text(home_src.replace("{{JSONLD}}", ld([org, pro, website, itemlist, faq_ld(home_src, SITE + "/")])))
 (ROOT / "pricing.html").write_text(price_src.replace("{{JSONLD}}", ld([org, website, price_page, service, faq_ld(price_src, PRICING)])))
 
-L = ["# Cygnix Labs", "", "> Cygnix Labs builds SEO and AEO (answer engine optimization) tools and fixes websites that are not showing on Google or in AI answers such as ChatGPT, Perplexity and Google AI Overviews. Every job follows three steps: the problem, a proof report from a real tool run, and the fix.", "",
-     f"Contact: {EMAIL} · Phone: {PHONE} · Site: {SITE}/ · Pricing: {PRICING} · Book a free 15-min consultation: {SITE}/?package=consultation#contact", "",
+L = ["# Cygnix Labs", "", "> Cygnix Labs is a done-for-you SEO and AEO (answer engine optimization) team based in Kuwait. We fix websites that customers can't find on Google, Google Maps or in AI answers such as ChatGPT, Gemini, Perplexity and Google AI Overviews. SEO and AI-search specialists do the work and a separate QA reviewer checks every fix on the live site. We serve Kuwait, Saudi Arabia and the Gulf, the UK, the US, Canada and Australia, including white-label work for agencies.", "",
+     "## How the service works", "", "1. Free first audit: real tool runs on the client's live pages, no passwords.", "2. Fix Queue: up to 15 priorities, ranked P0 (urgent) to P3, each with evidence and the fix.", "3. Client approval for anything customers read (copy, prices, hours); medical/legal claims need owner or clinician approval.", "4. Specialist fixes, with access granted by invite and least privilege.", "5. Independent QA check of every fix on the live site; nothing is reported as fixed before QA.", "6. Plain-English weekly or monthly reports. No ranking or AI-answer guarantees.", "",
+     "Service levels (scope only): Foundation (one site, one location), Growth (several locations or a small store, more monthly fixes, monthly AI-answer checks), Authority (multi-location or large catalogues, competitor AI-answer tracking, authority work). Who we help: agencies (white-label), clinics and dental, salons and spas, cleaning and home services, online stores, restaurants, and Kuwait and Saudi businesses.", "",
+     f"Free audit: {EMAIL} or {SITE}/#contact · Phone: {PHONE} · Problems we solve: {SITE}/problems.html · Pricing: {PRICING} · Book a free 15-min consultation: {SITE}/?package=consultation#contact", "",
      "## Packages and pricing", "", f"Full pricing: {PRICING}. {PAY_NOTE}", ""] + [f"- {n}: ${p}{'/month' if u else ' one-time'}. {d}" for _, n, p, d, u, _a in packs] + [
      "", "## Problems we solve (plain-language guides)", "", f"- [Problems we solve (hub)]({SITE}/problems.html): every problem below, explained from zero for business owners. Free first audit: {EMAIL}."] + [
      f"- [{p['short']}]({SITE}/{p['slug']}.html): {p['desc']}" for p in PROBLEMS] + [
-     "", "## Apify actors (run in the cloud, pay per use)", ""] + [f"- [{i['title']}]({i['url']}): {i.get('short_description','')} Price: {i.get('price','')}." for i in actors] + [
+     "", "## Apify actors (run in the cloud, pay per use)", "", "- [Business Search & AI Visibility Audit](https://apify.com/cygnix_labs/business-search-ai-visibility-audit): local SEO + AI search audit per business site: NAP and opening-hours consistency (site, schema, Google Business Profile, directories), AI crawler access and indexing, P0-P3 findings with fixes. Price: $0.04 per site."] + [f"- [{i['title']}]({i['url']}): {i.get('short_description','')} Price: {i.get('price','')}." for i in actors] + [
      "", "## Agensi skills for AI agents", ""] + [f"- [{i['title']}]({i['url']}): {i.get('short_description','')} Price: {i.get('price','')}." for i in skills] + [
      "", "## Optional", "", "- [Pricing and packages](" + PRICING + ")", "- [Problems we solve](" + SITE + "/problems.html)", "- [Listings feed (JSON)](" + SITE + "/feed/cygnix-listings.json)", ""]
 (ROOT / "llms.txt").write_text("\n".join(L))

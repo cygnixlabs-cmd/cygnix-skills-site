@@ -89,7 +89,7 @@ def build_kb():
              + (f"<br><b>Use it to:</b> {e(uc[0].rstrip('.'))}." if uc else "")
              + f"<br><b>Price:</b> pay per use, {e(i.get('price',''))} on Apify.")
         kb.append({"id": "actor:" + s, "kind": "actor", "title": name, "a": a, "link": i["url"], "cta": "Run it on Apify",
-                   "kw": KW.get(s, "") + " " + i.get("category", "") + " " + " ".join(uc), "aud": tags, "pkg": "Free site check"})
+                   "kw": KW.get(s, "") + " " + i.get("category", "") + " " + " ".join(uc), "aud": tags, "pkg": "Free audit"})
     for i in skills:
         bundle = i["type"] == "bundle"
         a = (f"<b>{e(i['title'])}</b> ({'Agensi bundle' if bundle else 'Agensi skill'}). "
@@ -114,10 +114,10 @@ def build_kb():
         kb.append({"id": "topic:" + id, "kind": "topic", "title": title, "kw": kw, "a": a, "tools": t, "aud": list(aud), "pkg": pkg, "link": link, "cta": cta})
     T("notindexed", "My pages are not indexed", "not indexed index indexing google not showing appear find missing crawled discovered search console website invisible",
       "That usually comes from a 404, a noindex tag, a wrong canonical, thin content or an orphan page. The <b>Indexing Fix Planner</b> checks every not-indexed URL and gives the cause and the fix for each one.",
-      ["indexing-fix-planner", "internal-link-audit"], ["business", "store", "agency"], "Free site check")
+      ["indexing-fix-planner", "internal-link-audit"], ["business", "store", "agency"], "Free audit")
     T("drop", "My rankings or traffic dropped", "drop dropped lost decline fell down traffic rankings ranking position clicks decay update",
       "Let's find which pages are losing clicks and why. <b>Content Decay Audit</b> ranks the pages that are slipping, and <b>SEO Change Impact Checker</b> tells you if a recent change caused it or if it is just noise.",
-      ["content-decay-audit", "seo-change-impact-checker"], ["business", "store", "agency"], "Free site check")
+      ["content-decay-audit", "seo-change-impact-checker"], ["business", "store", "agency"], "Free audit")
     T("backlinks", "Toxic or spam backlinks", "backlink backlinks toxic spam disavow negative links",
       "Most spam links can be ignored. <b>Spam Backlink Triage</b> gives one answer (NO / MONITOR / ACT) and a verdict per domain, so you only disavow when it really matters.",
       ["spam-backlink-triage"], ["business", "agency"])
@@ -126,10 +126,10 @@ def build_kb():
       ["redirect-checker"], ["store", "business", "agency"], "Fix Sprint — $299")
     T("ai", "ChatGPT and AI answers don't mention me", "ai chatgpt gpt perplexity gemini claude llm aeo geo overviews cite cited mention recommend answers visibility",
       "To get cited by ChatGPT, Perplexity and Google AI Overviews, AI tools need to read your pages and trust your brand facts. <b>AEO Checker</b> scores each page 0–100, and <b>Brand Facts Checker</b> finds facts your own site contradicts.",
-      ["aeo-readiness-checker", "brand-facts-checker"], ["business", "agency"], "Free site check")
+      ["aeo-readiness-checker", "brand-facts-checker"], ["business", "agency"], "Free audit")
     T("aeo", "What is AEO?", "what is aeo geo answer engine optimization meaning explain",
       "AEO (answer engine optimization) means making your pages easy for ChatGPT, Perplexity, Claude and Google AI Overviews to read, trust and cite. Our AEO checker scores each page from 0 to 100 and lists what to change, such as llms.txt, schema and clear brand facts.",
-      ["aeo-readiness-checker"], [], "Free site check")
+      ["aeo-readiness-checker"], [], "Free audit")
     T("llms", "What is llms.txt?", "llms.txt llms txt file ai crawler robots gptbot",
       "llms.txt is a plain-text file at the root of your site that gives AI tools a clean summary of your pages. Our <b>AEO & AI Visibility Audit</b> validates it and checks robots.txt for AI bots. You can see ours at <a href=\"llms.txt\">/llms.txt</a>.",
       ["aeo-readiness-checker"])
@@ -153,24 +153,24 @@ def build_kb():
       [], ["agency"], "Free sample audit (agencies)", "pricing.html#agencies", "Request a free sample")
     T("local", "Clinic, dental, salon or spa", "clinic clinics dental dentist doctor salon spa beauty local business near me cleaning service restaurant small business",
       "For local and service businesses we help you show up when people nearby search for your service, and when they ask an AI tool: indexing, local pages and AI visibility, then a monthly check so problems don't come back. A good start is the <b>free site check</b>; the <b>Monitor plan ($29/mo)</b> or <b>Growth plan ($59/mo)</b> keep it healthy.",
-      ["site-seo-aeo-audit", "aeo-readiness-checker"], ["business"], "Free site check", "pricing.html#plans", "See monthly plans")
+      ["site-seo-aeo-audit", "aeo-readiness-checker"], ["business"], "Free audit", "pricing.html#plans", "See monthly plans")
     T("store", "Online store / e-commerce", "store shop online ecommerce e-commerce retail shopify woocommerce products product category pages",
       "For online stores we get product and category pages indexed, keep redirects clean and catch drops early. Before or after a site move, a <b>Fix Sprint ($299)</b> fixes the top issues and rechecks them.",
-      ["indexing-fix-planner", "redirect-checker", "content-decay-audit"], ["store"], "Free site check", "pricing.html#oneoff", "See audits and Fix Sprint")
+      ["indexing-fix-planner", "redirect-checker", "content-decay-audit"], ["store"], "Free audit", "pricing.html#oneoff", "See audits and Fix Sprint")
     T("grow", "I want more customers from my website", "more customers clients leads sales visitors enquiries bookings grow business growth marketing found",
       "More customers from search starts with being found: your key pages indexed on Google, and clear enough for ChatGPT and AI Overviews to cite. We check that first and show you what is holding the site back. The <b>free site check</b> is the easiest start, or book a free 15-minute consultation to talk it through.",
-      ["site-seo-aeo-audit", "aeo-readiness-checker"], ["business", "store"], "Free site check")
+      ["site-seo-aeo-audit", "aeo-readiness-checker"], ["business", "store"], "Free audit")
     T("audit", "Not sure, check my whole site", "audit check whole site everything not sure help seo website review analyse analyze health",
       "Start with a full check. <b>Website SEO + AEO Audit</b> crawls your site and scores every page 0–100, covering meta tags, broken links, schema, llms.txt and AI readiness. Or we run it for you with the <b>free site check</b>.",
-      ["site-seo-aeo-audit"], ["business", "store", "agency"], "Free site check")
+      ["site-seo-aeo-audit"], ["business", "store", "agency"], "Free audit")
     T("pricing", "Packages and pricing", "price prices pricing cost costs how much fee fees plans packages charge budget cheap expensive",
       "Our packages (USD): <b>White-label audit $99</b> or <b>4 for $299</b> for agencies · monthly <b>Monitor $29</b>, <b>Growth $59</b>, <b>Agency $99</b> (5 sites) · one-time <b>Quick Audit $79</b>, <b>Full Audit $199</b>, <b>Fix Sprint $299</b>. Our Apify actors are pay per use, and Agensi skills have their own prices.",
       [], [], None, "pricing.html", "See full pricing")
     T("payment", "How do I pay?", "pay payment paypal card invoice bank checkout buy purchase",
       e(PAY_NOTE), [], [], None, "pricing.html#pay", "How payment works")
-    T("freecheck", "Free site check", "free check site check free audit no cost",
+    T("freecheck", "Free audit", "free check site check free audit no cost",
       "Send your website and the problem you see. We check it with our tools and reply by email with what is holding it back and how to fix it. There's no obligation.",
-      ["site-seo-aeo-audit"], ["business", "store"], "Free site check", "#contact", "Request a free site check")
+      ["site-seo-aeo-audit"], ["business", "store"], "Free audit", "#contact", "Request a free site check")
     T("consult", "Book a free 15-min consultation", "consultation consult call meeting talk speak book appointment zoom phone discuss",
       "You can book a <b>free 15-minute consultation</b>. Leave your details in the form and the Cygnix team emails you to set a time.",
       [], [], "consultation", "?package=consultation#contact", "Book a free 15-min consultation")
@@ -196,7 +196,7 @@ def build_kb():
       "We confirm the scope and turnaround by email when you book. For a question or a free check, the team replies by email, usually within 1–2 business days.")
     T("process", "How does it work?", "how does it work process steps what happens next",
       "1) Send your site and the problem. 2) We run the matching tools on your live pages. 3) You get a report and fix list in plain English. 4) You fix it, or we do, then we recheck. 5) Optional monthly monitoring.",
-      [], [], "Free site check", "index.html#process", "See the process")
+      [], [], "Free audit", "index.html#process", "See the process")
     return kb
 
 _kb = build_kb()

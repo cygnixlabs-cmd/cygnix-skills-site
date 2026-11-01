@@ -62,7 +62,7 @@ function prefill(pkg,msg){if(!form)return;var s=form.querySelector('[name=packag
 document.querySelectorAll('[data-package]').forEach(function(b){b.addEventListener('click',function(ev){prefill(b.dataset.package,b.dataset.msg||'');
  var h=b.getAttribute('href')||'';if(form&&h.charAt(0)==='?'){ev.preventDefault();try{history.replaceState(null,'',h);}catch(x){}var c=document.getElementById('contact');if(c)c.scrollIntoView({behavior:reduce?'auto':'smooth'});var n=form.querySelector('[name=name]');if(n)setTimeout(function(){n.focus({preventScroll:true});},600);}});});
 /* ?package=… preselects a package (for links in emails and DMs) */
-var ALIAS={consultation:'Free 15-min consultation','free-check':'Free site check',sample:'Free sample audit (agencies)'};
+var ALIAS={consultation:'Free 15-min consultation','free-check':'Free audit','free-audit':'Free audit',sample:'Free sample audit (agencies)'};
 try{var qp=new URLSearchParams(location.search).get('package');if(qp&&ALIAS[qp.toLowerCase()])qp=ALIAS[qp.toLowerCase()];if(qp&&form){var sel=form.querySelector('[name=package]');if(sel&&[].some.call(sel.options,function(o){return o.value===qp;}))prefill(qp,'');}}catch(e){}
 if(form){form.addEventListener('submit',function(e){e.preventDefault();var st=form.querySelector('.status');
  if(form.querySelector('[name=_honey]').value)return;

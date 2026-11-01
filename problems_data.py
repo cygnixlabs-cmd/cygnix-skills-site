@@ -2,6 +2,7 @@
 # Real content only. No invented results, stats or testimonials. Tools must be live Cygnix Apify actors.
 APIFY = "https://apify.com/cygnix_labs/"
 TOOLS = {
+ "business-search-ai-visibility-audit": "Business Search & AI Visibility Audit (NAP, hours, AI crawlers)",
  "aeo-readiness-checker": "AEO & AI Visibility Audit",
  "brand-facts-checker": "Brand Facts Checker",
  "ai-overview-page-optimizer": "AI Overview Page Optimizer",
@@ -89,7 +90,7 @@ PROBLEMS = [
       "We check each treatment page for indexing, clear facts and schema, and test your booking links.",
       "You get a Fix Queue (max 15 items, P0 to P3). Broken booking and wrong facts come first.",
       "Medical claims are never published without your clinician's approval (our A4 level). Listing changes need you to invite us as a manager; we never ask for passwords. Our QA reviewer checks every change live."],
-  tools=["site-seo-aeo-audit", "brand-facts-checker", "redirect-checker"],
+  tools=["business-search-ai-visibility-audit", "brand-facts-checker", "redirect-checker"],
   gulf="Google Maps is the usual way people in Kuwait and Saudi Arabia find a clinic, and patients search in both Arabic and English. Area names are spelled in several ways in English (for example Salmiya and Salmiyah), so your listing and website need to be clear and consistent.",
   faqs=[("Is Google Business Profile free?", "Yes. The listing itself is free. You do need to verify that you own or manage the practice."),
         ("Can you get us into the top three on the map?", "No one can promise a map position, because Google decides and distance from the searcher matters. We fix the things that commonly hold clinics back and show you the before and after."),
@@ -196,7 +197,7 @@ PROBLEMS = [
       "We check whether each main service has a clear page that Google and AI tools can read, with prices only if you confirm them.",
       "You get a Fix Queue (max 15 items, P0 to P3). Wrong facts and broken booking links come first.",
       "Approved fixes are made by our specialists and checked live by our QA reviewer. Listing changes need a manager invite from you; never a password."],
-  tools=["site-seo-aeo-audit", "brand-facts-checker", "aeo-readiness-checker"],
+  tools=["business-search-ai-visibility-audit", "brand-facts-checker", "aeo-readiness-checker"],
   gulf="In Kuwait and Saudi Arabia many salons and spas book mainly through Instagram and WhatsApp. That works for existing customers, but new customers searching Google Maps or asking an AI tool need a listing and a simple website with the same facts.",
   faqs=[("I get customers from Instagram. Do I still need this?", "Instagram keeps existing customers engaged. New customers who search Google or ask an AI tool mostly see Google listings and websites, so those need to be complete too."),
         ("Do I need a big website?", "No. A clear page for each main service, your area, hours, booking method and real photos is often enough."),

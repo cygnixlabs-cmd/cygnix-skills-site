@@ -10,7 +10,7 @@ _logo = _ptpl[_ptpl.index('<a class="logo" href="./"'):_ptpl.index("</a>", _ptpl
 PURL = lambda s: f"{SITE}/{s}.html"
 HUB = SITE + "/problems.html"
 AREAS = ["Kuwait", "Saudi Arabia", "United Arab Emirates", "Qatar", "Bahrain", "Oman", "United Kingdom", "United States", "Canada", "Australia"]
-FREE = "Free site check"
+FREE = "Free audit"
 
 def _mailto(subject):
     return "mailto:" + EMAIL + "?subject=" + _up.quote(subject)
