@@ -40,3 +40,10 @@ Public contact is **info@cygnixlabs.com** and **+965 5178 5758** only (set in `b
 - On `motion-lg`, the site gets smooth scroll, the pinned How it works sequence, the pinned Who it's for carousel, the particle background and the section depth exits.
 - Phones get lighter, one-shot reveals.
 - With reduced motion turned on, the page is static.
+
+## Problem landing pages (added 2026-11-01)
+- Content lives in `problems_data.py` (`PROBLEMS`, `TOOLS`); `build_problems.py` renders `problems.html` (hub) and one root-level page per problem (`<slug>.html`), reusing the pricing page chrome, contact form, chat and footer.
+- Flat root URLs on purpose: the JS and chat KB use relative asset/page paths, so sub-folders would break them.
+- `build.py` also adds the homepage "Problems we solve" section (`{{PROBLEM_CARDS}}`), nav + footer links, sitemap entries and an llms.txt section.
+- Each page: WebPage + Service (free first audit Offer, areaServed incl. Kuwait/Saudi) + FAQPage JSON-LD, canonical, OG/Twitter tags.
+- To add a page: append a dict to `PROBLEMS` (tools must be live Cygnix Apify slugs in `TOOLS`), then `./deploy.sh`.

@@ -23,6 +23,7 @@ items = [i for i in feed["items"] if i.get("url") and i.get("slug") not in EXCLU
 actors = [i for i in items if i["platform"] == "Apify"]
 skills = [i for i in items if i["platform"] != "Apify"]
 e = html.escape
+exec((ROOT / "problems_data.py").read_text())  # PROBLEMS, TOOLS, APIFY: problem landing pages
 
 def card(i):
     ap = i["platform"] == "Apify"
@@ -98,6 +99,7 @@ def fill(src):
     return (src.replace("{{EMAIL}}", EMAIL).replace("{{PHONE}}", PHONE).replace("{{TEL}}", TEL).replace("{{PAY_NOTE}}", e(PAY_NOTE)).replace("{{PAY_SHORT}}", e(PAY_SHORT)).replace("{{PAY_LEAD}}", e(PAY_LEAD)).replace("{{BOOK}}", e(BOOK))
                .replace("{{PACKAGE_OPTIONS}}", opts).replace("{{SITE}}", SITE).replace("{{TOOL_CARDS}}", "".join(card(i) for i in actors))
                .replace("{{UPDATED}}", f'{feed.get("updated", now)} · {len(items)} live tools and skills').replace("{{YEAR}}", str(datetime.date.today().year))
+               .replace("{{PROBLEM_CARDS}}", "".join(f'<a class="find glass" href="{p["slug"]}.html"><span class="fi" aria-hidden="true">{p["icon"]}</span><h3>{e(p["short"])}</h3><p>{e(p["desc"])}</p><small>Read the guide →</small></a>' for p in PROBLEMS))
                .replace("{{V}}", datetime.datetime.now().strftime("%Y%m%d%H%M")))
 home_src = fill((ROOT / "template.html").read_text())
 price_src = fill((ROOT / "pricing-template.html").read_text())
@@ -112,14 +114,19 @@ price_page = {"@type": "WebPage", "@id": PRICING + "#page", "url": PRICING, "nam
 L = ["# Cygnix Labs", "", "> Cygnix Labs builds SEO and AEO (answer engine optimization) tools and fixes websites that are not showing on Google or in AI answers such as ChatGPT, Perplexity and Google AI Overviews. Every job follows three steps: the problem, a proof report from a real tool run, and the fix.", "",
      f"Contact: {EMAIL} · Phone: {PHONE} · Site: {SITE}/ · Pricing: {PRICING} · Book a free 15-min consultation: {SITE}/?package=consultation#contact", "",
      "## Packages and pricing", "", f"Full pricing: {PRICING}. {PAY_NOTE}", ""] + [f"- {n}: ${p}{'/month' if u else ' one-time'}. {d}" for _, n, p, d, u, _a in packs] + [
+     "", "## Problems we solve (plain-language guides)", "", f"- [Problems we solve (hub)]({SITE}/problems.html): every problem below, explained from zero for business owners. Free first audit: {EMAIL}."] + [
+     f"- [{p['short']}]({SITE}/{p['slug']}.html): {p['desc']}" for p in PROBLEMS] + [
      "", "## Apify actors (run in the cloud, pay per use)", ""] + [f"- [{i['title']}]({i['url']}): {i.get('short_description','')} Price: {i.get('price','')}." for i in actors] + [
      "", "## Agensi skills for AI agents", ""] + [f"- [{i['title']}]({i['url']}): {i.get('short_description','')} Price: {i.get('price','')}." for i in skills] + [
-     "", "## Optional", "", "- [Pricing and packages](" + PRICING + ")", "- [Listings feed (JSON)](" + SITE + "/feed/cygnix-listings.json)", ""]
+     "", "## Optional", "", "- [Pricing and packages](" + PRICING + ")", "- [Problems we solve](" + SITE + "/problems.html)", "- [Listings feed (JSON)](" + SITE + "/feed/cygnix-listings.json)", ""]
 (ROOT / "llms.txt").write_text("\n".join(L))
 (ROOT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     f'<url><loc>{SITE}/</loc><lastmod>{now}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n'
     f'<url><loc>{PRICING}</loc><lastmod>{now}</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n'
+    f'<url><loc>{SITE}/problems.html</loc><lastmod>{now}</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>\n'
+    + "".join(f'<url><loc>{SITE}/{p["slug"]}.html</loc><lastmod>{now}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n' for p in PROBLEMS) +
     f'<url><loc>{SITE}/llms.txt</loc><lastmod>{now}</lastmod></url>\n</urlset>\n')
 (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\n# AI crawlers welcome\nUser-agent: GPTBot\nAllow: /\nUser-agent: OAI-SearchBot\nAllow: /\nUser-agent: ChatGPT-User\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
 print(f"built: {len(actors)} actors, {len(skills)} skills, {len(faqs)} faqs")
+exec((ROOT / "build_problems.py").read_text())  # problems.html hub + one page per problem
 exec((ROOT / "build_kb.py").read_text())  # chat assistant knowledge base -> assets/kb.json

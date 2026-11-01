@@ -17,6 +17,18 @@ Full pricing: https://skills.cygnixlabs.com/pricing.html. There is no card check
 - Full Audit: $199 one-time. Whole-site SEO + AEO audit with redirects, internal links, backlinks and content decay.
 - Fix Sprint: $299 one-time. We fix the top issues from your audit, recheck and resubmit the pages to Google.
 
+## Problems we solve (plain-language guides)
+
+- [Problems we solve (hub)](https://skills.cygnixlabs.com/problems.html): every problem below, explained from zero for business owners. Free first audit: info@cygnixlabs.com.
+- [Not in ChatGPT or AI answers](https://skills.cygnixlabs.com/not-showing-in-chatgpt-ai-answers.html): When people ask ChatGPT, Gemini or Perplexity for a business like yours, does your name come up? Why AI tools skip some businesses, how to check, and how we fix it.
+- [Google isn't indexing my pages](https://skills.cygnixlabs.com/google-not-indexing-my-pages.html): Pages live but not on Google? "Crawled - currently not indexed" or "Discovered - not indexed" explained in plain words, how to check, and how we fix it.
+- [Clinic or dental not on Google Maps](https://skills.cygnixlabs.com/clinic-dental-not-on-google-maps.html): Patients search "dentist near me" and find someone else? Why clinics drop out of Google Maps and AI answers, how to check, and how we fix it safely.
+- [Website traffic suddenly dropped](https://skills.cygnixlabs.com/website-traffic-suddenly-dropped.html): A sudden drop in Google traffic is either a technical break on your site or a Google change. How to tell which, why it matters, and how we find and fix the cause.
+- [Broken links and redirects](https://skills.cygnixlabs.com/broken-links-and-redirects-losing-customers.html): 404 pages, redirect chains and lost backlinks quietly cost visitors and Google trust. How to spot them, why they cost money, and how we fix them.
+- [Two pages competing for one keyword](https://skills.cygnixlabs.com/two-pages-competing-for-the-same-keyword.html): When two of your own pages target the same search, Google may rank neither well. What keyword cannibalization is, how to check, and how we fix it.
+- [Salon or spa not found locally](https://skills.cygnixlabs.com/salon-spa-not-found-locally.html): People nearby search "hair salon near me" or ask an AI tool, and find someone else. Why salons and spas get missed, how to check, and how we fix it.
+- [E-commerce product pages not ranking](https://skills.cygnixlabs.com/ecommerce-product-pages-not-ranking.html): Product and category pages missing from Google or stuck on page 3? The usual technical causes for online stores, how to check, and how we fix them.
+
 ## Apify actors (run in the cloud, pay per use)
 
 - [Redirect Chain Checker & Bulk HTTP Status Checker: 301 QA](https://apify.com/cygnix_labs/redirect-checker): Bulk redirect chain checker and HTTP status code checker. Traces every hop (301/302/307/308, meta refresh), flags redirect chains, loops, 404s, soft 404s and noindex targets, and QAs old→new redirect maps after a... Price: $0.0008 per url checked.
@@ -113,4 +125,5 @@ Full pricing: https://skills.cygnixlabs.com/pricing.html. There is no card check
 ## Optional
 
 - [Pricing and packages](https://skills.cygnixlabs.com/pricing.html)
+- [Problems we solve](https://skills.cygnixlabs.com/problems.html)
 - [Listings feed (JSON)](https://skills.cygnixlabs.com/feed/cygnix-listings.json)
