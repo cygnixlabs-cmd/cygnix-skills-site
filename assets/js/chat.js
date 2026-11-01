@@ -115,7 +115,7 @@ function answer(it,extra){S.ctx.last=it.id;S.ctx.n=(S.ctx.n||0)+1;if(it.kind==='
  if(it.tools&&it.tools.length)h+='<br><span class="try">Try it:</span> '+it.tools.map(function(t){return '<a href="'+esc(t[1])+'" target="_blank" rel="noopener">'+esc(t[0])+' →</a>';}).join(' · ');
  bubble(h);
  var c=[];var lb=linkBtn(it);if(lb)c.push(lb);
- if(it.pkg&&it.pkg!=='consultation'&&document.getElementById('contact-form'))c.push({label:it.pkg==='Free sample audit (agencies)'?'Request a free sample':(it.pkg==='Free site check'?'Get a free site check':'Book: '+it.pkg),fn:function(){toForm(it.pkg);}});
+ if(it.pkg&&it.pkg!=='consultation'&&document.getElementById('contact-form'))c.push({label:it.pkg==='Free sample audit (agencies)'?'Request a free sample':(it.pkg==='Free audit'?'Get a free site check':'Book: '+it.pkg),fn:function(){toForm(it.pkg);}});
  if(it.id!=='topic:consult')c.push(consultChip());
  chipRow(c.slice(0,3),'after');renderSug();}
 function clarify(r,q){S.ctx.miss++;save();

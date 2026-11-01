@@ -1,8 +1,19 @@
 # Cygnix Labs
 
-> Cygnix Labs builds SEO and AEO (answer engine optimization) tools and fixes websites that are not showing on Google or in AI answers such as ChatGPT, Perplexity and Google AI Overviews. Every job follows three steps: the problem, a proof report from a real tool run, and the fix.
+> Cygnix Labs is a done-for-you SEO and AEO (answer engine optimization) team based in Kuwait. We fix websites that customers can't find on Google, Google Maps or in AI answers such as ChatGPT, Gemini, Perplexity and Google AI Overviews. SEO and AI-search specialists do the work and a separate QA reviewer checks every fix on the live site. We serve Kuwait, Saudi Arabia and the Gulf, the UK, the US, Canada and Australia, including white-label work for agencies.
 
-Contact: info@cygnixlabs.com · Phone: +965 5178 5758 · Site: https://skills.cygnixlabs.com/ · Pricing: https://skills.cygnixlabs.com/pricing.html · Book a free 15-min consultation: https://skills.cygnixlabs.com/?package=consultation#contact
+## How the service works
+
+1. Free first audit: real tool runs on the client's live pages, no passwords.
+2. Fix Queue: up to 15 priorities, ranked P0 (urgent) to P3, each with evidence and the fix.
+3. Client approval for anything customers read (copy, prices, hours); medical/legal claims need owner or clinician approval.
+4. Specialist fixes, with access granted by invite and least privilege.
+5. Independent QA check of every fix on the live site; nothing is reported as fixed before QA.
+6. Plain-English weekly or monthly reports. No ranking or AI-answer guarantees.
+
+Service levels (scope only): Foundation (one site, one location), Growth (several locations or a small store, more monthly fixes, monthly AI-answer checks), Authority (multi-location or large catalogues, competitor AI-answer tracking, authority work). Who we help: agencies (white-label), clinics and dental, salons and spas, cleaning and home services, online stores, restaurants, and Kuwait and Saudi businesses.
+
+Free audit: info@cygnixlabs.com or https://skills.cygnixlabs.com/#contact · Phone: +965 5178 5758 · Problems we solve: https://skills.cygnixlabs.com/problems.html · Pricing: https://skills.cygnixlabs.com/pricing.html · Book a free 15-min consultation: https://skills.cygnixlabs.com/?package=consultation#contact
 
 ## Packages and pricing
 
@@ -31,6 +42,7 @@ Full pricing: https://skills.cygnixlabs.com/pricing.html. There is no card check
 
 ## Apify actors (run in the cloud, pay per use)
 
+- [Business Search & AI Visibility Audit](https://apify.com/cygnix_labs/business-search-ai-visibility-audit): local SEO + AI search audit per business site: NAP and opening-hours consistency (site, schema, Google Business Profile, directories), AI crawler access and indexing, P0-P3 findings with fixes. Price: $0.04 per site.
 - [Redirect Chain Checker & Bulk HTTP Status Checker: 301 QA](https://apify.com/cygnix_labs/redirect-checker): Bulk redirect chain checker and HTTP status code checker. Traces every hop (301/302/307/308, meta refresh), flags redirect chains, loops, 404s, soft 404s and noindex targets, and QAs old→new redirect maps after a... Price: $0.0008 per url checked.
 - [Crawled - Currently Not Indexed Fixer (GSC Indexing Diagnosis)](https://apify.com/cygnix_labs/indexing-fix-planner): Why won't Google index my pages? Paste your Search Console not-indexed URLs: per-URL cause (404, noindex vs sitemap, canonical, near-duplicate, thin, JS-empty, orphan, weak links, low-value URL) + fix, in priority... Price: $0.004 per url diagnosed.
 - [Website SEO Audit & Site Audit Crawler: Technical SEO + AEO/GEO](https://apify.com/cygnix_labs/site-seo-aeo-audit): SEO audit + site audit crawler with an AI search readiness (AEO/GEO) score + technical SEO checks. One URL in: each page and the site scored 0-100 for meta tags, broken links, soft 404s, schema, llms.txt,... Price: $0.01 per page audited.
