@@ -50,7 +50,7 @@ pro = {"@type": "ProfessionalService", "@id": SITE + "/#business", "name": "Cygn
        "description": "Done-for-you SEO and AEO (answer engine optimization) service by a specialist team: free first audit, a Fix Queue of up to 15 priorities (P0-P3), client approval, specialist fixes, an independent QA check of every fix, and plain-English reports.",
        "email": EMAIL, "telephone": TEL, "address": org["address"], "areaServed": AREAS_SERVED, "parentOrganization": {"@id": SITE + "/#org"},
        "knowsAbout": ["Search engine optimization", "Answer engine optimization", "Generative engine optimization", "Local SEO", "Google Business Profile", "Technical SEO", "Schema markup"],
-       "knowsLanguage": ["en", "ar"],
+       "knowsLanguage": ["en"],
        "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Done-for-you SEO + AEO service", "itemListElement": [
            {"@type": "Offer", "name": "Free first audit", "price": "0", "priceCurrency": "USD", "url": SITE + "/#contact", "itemOffered": {"@type": "Service", "name": "Free SEO + AEO audit with a Fix Queue of up to 15 priorities"}}] + [
            {"@type": "Offer", "name": n, "url": SITE + "/#service", "itemOffered": {"@type": "Service", "name": n + " (done-for-you SEO + AEO)", "description": d}} for n, d in [
