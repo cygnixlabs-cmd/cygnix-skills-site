@@ -123,6 +123,22 @@ price_page = {"@type": "WebPage", "@id": PRICING + "#page", "url": PRICING, "nam
               "about": {"@id": SITE + "/#service"}, "breadcrumb": crumbs}
 (ROOT / "index.html").write_text(home_src.replace("{{JSONLD}}", ld([org, pro, website, itemlist, faq_ld(home_src, SITE + "/")])))
 (ROOT / "pricing.html").write_text(price_src.replace("{{JSONLD}}", ld([org, website, price_page, service, faq_ld(price_src, PRICING)])))
+# GitHub Pages serves /pricing/ only if pricing/index.html exists; without it /pricing/ 404s.
+(ROOT / "pricing").mkdir(exist_ok=True)
+(ROOT / "pricing" / "index.html").write_text("""<!doctype html>
+<html lang=\"en\">
+<head>
+<meta charset=\"utf-8\">
+<title>Pricing and packages | Cygnix Labs</title>
+<link rel=\"canonical\" href=\"https://skills.cygnixlabs.com/pricing.html\">
+<meta http-equiv=\"refresh\" content=\"0;url=/pricing.html\">
+<meta name=\"robots\" content=\"noindex,follow\">
+</head>
+<body>
+<p>Pricing moved to <a href=\"/pricing.html\">/pricing.html</a>.</p>
+</body>
+</html>
+""")
 
 L = ["# Cygnix Labs", "", "> Cygnix Labs is a done-for-you SEO and AEO (answer engine optimization) team based in Kuwait. We fix websites that customers can't find on Google, Google Maps or in AI answers such as ChatGPT, Gemini, Perplexity and Google AI Overviews. SEO and AI-search specialists do the work and a separate QA reviewer checks every fix on the live site. We serve Kuwait, Saudi Arabia and the Gulf, the UK, the US, Canada and Australia, including white-label work for agencies.", "",
      "## How the service works", "", "1. Free first audit: real tool runs on the client's live pages, no passwords.", "2. Fix Queue: up to 15 priorities, ranked P0 (urgent) to P3, each with evidence and the fix.", "3. Client approval for anything customers read (copy, prices, hours); medical/legal claims need owner or clinician approval.", "4. Specialist fixes, with access granted by invite and least privilege.", "5. Independent QA check of every fix on the live site; nothing is reported as fixed before QA.", "6. Plain-English weekly or monthly reports. No ranking or AI-answer guarantees.", "",
@@ -138,6 +154,7 @@ L = ["# Cygnix Labs", "", "> Cygnix Labs is a done-for-you SEO and AEO (answer e
 (ROOT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     f'<url><loc>{SITE}/</loc><lastmod>{now}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n'
     f'<url><loc>{PRICING}</loc><lastmod>{now}</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n'
+    f'<url><loc>{SITE}/pricing/</loc><lastmod>{now}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n'
     f'<url><loc>{SITE}/problems.html</loc><lastmod>{now}</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>\n'
     + "".join(f'<url><loc>{SITE}/{p["slug"]}.html</loc><lastmod>{now}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n' for p in PROBLEMS) +
     f'<url><loc>{SITE}/llms.txt</loc><lastmod>{now}</lastmod></url>\n</urlset>\n')
