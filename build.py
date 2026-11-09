@@ -154,7 +154,6 @@ L = ["# Cygnix Labs", "", "> Cygnix Labs is a done-for-you SEO and AEO (answer e
 (ROOT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     f'<url><loc>{SITE}/</loc><lastmod>{now}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n'
     f'<url><loc>{PRICING}</loc><lastmod>{now}</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n'
-    f'<url><loc>{SITE}/pricing/</loc><lastmod>{now}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n'
     f'<url><loc>{SITE}/problems.html</loc><lastmod>{now}</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>\n'
     + "".join(f'<url><loc>{SITE}/{p["slug"]}.html</loc><lastmod>{now}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>\n' for p in PROBLEMS) +
     f'<url><loc>{SITE}/llms.txt</loc><lastmod>{now}</lastmod></url>\n</urlset>\n')
