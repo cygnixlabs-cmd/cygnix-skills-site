@@ -114,8 +114,13 @@ for i in skills:
     pr = skill_price(i.get("price"))
     if pr is not None: o["price"] = pr
     if RETURN_POLICY and pr not in (None, "0"): o["hasMerchantReturnPolicy"] = return_policy()
-    prods.append({"@type": "Product", "name": i["title"], "url": i["url"], "image": PRODUCT_IMAGE, "description": i.get("short_description", ""),
-                  "category": i.get("category", ""), "brand": {"@type": "Organization", "@id": SITE + "/#org", "name": "Cygnix Labs"}, "offers": o})
+    # Google merchant listings need a price > 0, so free skills are marked up as CreativeWork (free offer), not Product.
+    kind = "CreativeWork" if pr == "0" else "Product"
+    x = {"@type": kind, "name": i["title"], "url": i["url"], "image": PRODUCT_IMAGE, "description": i.get("short_description", "")}
+    if kind == "Product": x.update({"category": i.get("category", ""), "brand": {"@type": "Organization", "@id": SITE + "/#org", "name": "Cygnix Labs"}})
+    else: x.update({"genre": i.get("category", ""), "publisher": {"@id": SITE + "/#org"}, "isAccessibleForFree": True})
+    x["offers"] = o
+    prods.append(x)
 itemlist = {"@type": "ItemList", "@id": SITE + "/#tools", "name": "Cygnix Labs SEO and AEO tools",
             "itemListElement": [{"@type": "ListItem", "position": n + 1, "item": x} for n, x in enumerate(apps + prods)]}
 def faqs_of(src):
