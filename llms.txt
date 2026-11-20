@@ -63,8 +63,16 @@ Full pricing: https://skills.cygnixlabs.com/pricing.html. There is no card check
 
 ## Agensi skills for AI agents
 
-- [Spam Backlink Triage: Should I Care or Disavow? (Toxic Links Checker)](https://agensi.io/skills/spam-backlink-triage-should-i-care-or-disavow-toxic-links-checker): Should I Care or Disavow? (Toxic Links Checker) Price: $7.
-- [Indexing Fix Planner: Why Google Won't Index Your Pages (Crawled - Currently Not Indexed)](https://agensi.io/skills/indexing-fix-planner-why-google-won-t-index-your-pages-crawled-currently-not-indexed): Why Google Won't Index Your Pages (Crawled - Currently Not Indexed) Price: $7.
+- [Free SEO Audit: 17-Point One-Page Check + Fix List](https://agensi.io/skills/free-seo-audit-17-point-one-page-check-fix-list): 17-Point One-Page Check + Fix List Price: Free.
+- [Search Console Quick Wins Lite (Free): Striking Distance](https://agensi.io/skills/search-console-quick-wins-lite-free-striking-distance): Striking Distance Price: Free.
+- [Traffic Drop Triage (Free): Tech Break or Google Update?](https://agensi.io/skills/traffic-drop-triage-free-tech-break-or-google-update): Tech Break or Google Update? Price: Free.
+- [AI Visibility Quick Check (Free): Can ChatGPT Read Your Site](https://agensi.io/skills/ai-visibility-quick-check-free-can-chatgpt-read-your-site): Can ChatGPT Read Your Site Price: Free.
+- [Backlink Reclamation: Fix 404 Pages With Backlinks (301 Map)](https://agensi.io/skills/backlink-reclamation-fix-404-pages-with-backlinks-301-map): Fix 404 Pages With Backlinks (301 Map) Price: $6.
+- [Traffic Drop Emergency Check: Google Update or Tech Break?](https://agensi.io/skills/traffic-drop-emergency-check-google-update-or-tech-break): Google Update or Tech Break? Price: $7.
+- [Google Review Request Kit: QR, SMS, WhatsApp + Policy Check](https://agensi.io/skills/google-review-request-kit-qr-sms-whatsapp-policy-check): QR, SMS, WhatsApp + Policy Check Price: $5.
+- [AI Overview Page Optimizer: Get Cited in AI Mode & ChatGPT](https://agensi.io/skills/ai-overview-page-optimizer-get-cited-in-ai-mode-chatgpt): Get Cited in AI Mode & ChatGPT Price: $7.
+- [Spam Backlink Triage: Care or Disavow? (Toxic Links Checker)](https://agensi.io/skills/spam-backlink-triage-care-or-disavow-toxic-links-checker): Care or Disavow? (Toxic Links Checker) Price: $7.
+- [Indexing Fix Planner: Crawled - Currently Not Indexed](https://agensi.io/skills/indexing-fix-planner-crawled-currently-not-indexed): Crawled - Currently Not Indexed Price: $7.
 - [SEO Change Impact Checker: Did It Work or Is It Noise?](https://agensi.io/skills/seo-change-impact-checker-did-it-work-or-is-it-noise): Did It Work or Is It Noise? Price: $7.
 - [Brand Facts Page Builder: The About Page AI Overviews Cite](https://agensi.io/skills/brand-facts-page-builder-the-about-page-ai-overviews-cite): The About Page AI Overviews Cite Price: $7.
 - [AI Search Visibility Pro: GEO/AEO Audit + AI Citation SOV](https://agensi.io/skills/ai-search-visibility-pro-geo-aeo-audit-ai-citation-sov): GEO/AEO Audit + AI Citation SOV Price: $39.
@@ -122,13 +130,13 @@ Full pricing: https://skills.cygnixlabs.com/pricing.html. There is no card check
 - [Code Review Lite — Severity Checklist](https://agensi.io/skills/code-review-lite-severity-checklist): Code Review Lite — Severity Checklist Price: Free.
 - [SEO Content Brief — Writer-Ready Outline](https://agensi.io/skills/seo-content-brief-writer-ready-outline): SEO Content Brief — Writer-Ready Outline Price: Free.
 - [Humanize AI Writing: Remove AI Tells, Keep Your Meaning](https://agensi.io/skills/humanize-ai-writing-remove-ai-tells-keep-your-meaning): Remove AI Tells, Keep Your Meaning Price: $5.
-- [Turn Any Task into a Reusable Prompt Template](https://agensi.io/skills/turn-any-task-into-a-reusable-prompt-template): Turn Any Task into a Reusable Prompt Template Price: $5.
+- [Turn Any Task into a Reusable Prompt Template](https://agensi.io/skills/turn-any-task-into-a-reusable-prompt-template): Turn Any Task into a Reusable Prompt Template Price: $4.
 - [Customer Interviews → Themes, Jobs + Next Questions](https://agensi.io/skills/customer-interviews-themes-jobs-next-questions): Customer Interviews → Themes, Jobs + Next Questions Price: $7.
 - [Price With Confidence — Tiers, Packaging + Test Plan](https://agensi.io/skills/price-with-confidence-tiers-packaging-test-plan): Price With Confidence — Tiers, Packaging + Test Plan Price: $9.
 - [Competitor Feature Gap Map: Find 3 Features You Can Win On](https://agensi.io/skills/competitor-feature-gap-map-find-3-features-you-can-win-on): Find 3 Features You Can Win On Price: $5.
 - [AEO Audit — Get Cited in ChatGPT + AI Overviews](https://agensi.io/skills/aeo-audit-get-cited-in-chatgpt-ai-overviews): AEO Audit — Get Cited in ChatGPT + AI Overviews Price: $7.
 - [Chatbot Script Builder — Intents to MVP Conversation Flow](https://agensi.io/skills/chatbot-script-builder-intents-to-mvp-conversation-flow): Chatbot Script Builder — Intents to MVP Conversation Flow Price: $4.
-- [Keyword Clusters + Intent Map: No Paid SEO Tool Needed](https://agensi.io/skills/keyword-clusters-intent-map-no-paid-seo-tool-needed): No Paid SEO Tool Needed Price: $7.
+- [Keyword Research + Clusters: Volumes, SERP & Intent Map](https://agensi.io/skills/keyword-research-clusters-volumes-serp-intent-map): Volumes, SERP & Intent Map Price: $7.
 - [Landing Page Critique: P0–P2 Conversion Fix List](https://agensi.io/skills/landing-page-critique-p0-p2-conversion-fix-list): P0–P2 Conversion Fix List Price: $5.
 - [Go-To-Market Plan — One-Pager + 30-Day Experiments](https://agensi.io/skills/go-to-market-plan-one-pager-30-day-experiments): Go-To-Market Plan — One-Pager + 30-Day Experiments Price: $5.
 - [Make Faster Business Decisions — Decision Memo Pack](https://agensi.io/skills/make-faster-business-decisions-decision-memo-pack): Make Faster Business Decisions — Decision Memo Pack Price: $7.
