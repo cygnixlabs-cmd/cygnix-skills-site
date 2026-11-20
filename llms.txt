@@ -63,6 +63,14 @@ Full pricing: https://skills.cygnixlabs.com/pricing.html. There is no card check
 
 ## Agensi skills for AI agents
 
+- [Free SEO Audit: 17-Point One-Page Check + Fix List](https://agensi.io/skills/free-seo-audit-17-point-one-page-check-fix-list): 17-Point One-Page Check + Fix List Price: Free.
+- [Search Console Quick Wins Lite (Free): Striking Distance](https://agensi.io/skills/search-console-quick-wins-lite-free-striking-distance): Striking Distance Price: Free.
+- [Traffic Drop Triage (Free): Tech Break or Google Update?](https://agensi.io/skills/traffic-drop-triage-free-tech-break-or-google-update): Tech Break or Google Update? Price: Free.
+- [AI Visibility Quick Check (Free): Can ChatGPT Read Your Site](https://agensi.io/skills/ai-visibility-quick-check-free-can-chatgpt-read-your-site): Can ChatGPT Read Your Site Price: Free.
+- [Backlink Reclamation: Fix 404 Pages With Backlinks (301 Map)](https://agensi.io/skills/backlink-reclamation-fix-404-pages-with-backlinks-301-map): Fix 404 Pages With Backlinks (301 Map) Price: $6.
+- [Traffic Drop Emergency Check: Google Update or Tech Break?](https://agensi.io/skills/traffic-drop-emergency-check-google-update-or-tech-break): Google Update or Tech Break? Price: $7.
+- [Google Review Request Kit: QR, SMS, WhatsApp + Policy Check](https://agensi.io/skills/google-review-request-kit-qr-sms-whatsapp-policy-check): QR, SMS, WhatsApp + Policy Check Price: $5.
+- [AI Overview Page Optimizer: Get Cited in AI Mode & ChatGPT](https://agensi.io/skills/ai-overview-page-optimizer-get-cited-in-ai-mode-chatgpt): Get Cited in AI Mode & ChatGPT Price: $7.
 - [Spam Backlink Triage: Care or Disavow? (Toxic Links Checker)](https://agensi.io/skills/spam-backlink-triage-care-or-disavow-toxic-links-checker): Care or Disavow? (Toxic Links Checker) Price: $7.
 - [Indexing Fix Planner: Crawled - Currently Not Indexed](https://agensi.io/skills/indexing-fix-planner-crawled-currently-not-indexed): Crawled - Currently Not Indexed Price: $7.
 - [SEO Change Impact Checker: Did It Work or Is It Noise?](https://agensi.io/skills/seo-change-impact-checker-did-it-work-or-is-it-noise): Did It Work or Is It Noise? Price: $7.
