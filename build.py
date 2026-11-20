@@ -91,12 +91,31 @@ for i in actors:
     if num(i.get("price")): o["price"] = num(i["price"])
     apps.append({"@type": "SoftwareApplication", "name": i["title"], "url": i["url"], "applicationCategory": "BusinessApplication",
                  "operatingSystem": "Web (Apify cloud)", "description": i.get("short_description", ""), "publisher": {"@id": SITE + "/#org"}, "offers": o})
+# Product rich results (Google Search Console, 2026-11-21): every Product needs an image; brand + offers with a real price.
+# Image: the site's own OG image (hosted here, 1200x630); Agensi pages only expose a generic agensi.io OG image.
+# No review / aggregateRating: there are no real reviews to mark up (never invent them).
+# No shippingDetails: digital download, nothing ships.
+PRODUCT_IMAGE = SITE + "/assets/img/og.jpg"
+# Agensi Terms 5.5 (money-back guarantee): full refund within 30 days if a paid skill does not do what its page promises.
+# It is a conditional guarantee, not an unconditional return window, so it is OFF by default; set True only if the owner
+# agrees it is a fair MerchantReturnPolicy for these listings.
+RETURN_POLICY = False
+def return_policy():
+    return {"@type": "MerchantReturnPolicy", "applicableCountry": [c for c in ["US", "GB", "CA", "AU", "KW", "SA", "AE"]],
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow", "merchantReturnDays": 30,
+            "returnFees": "https://schema.org/FreeReturn", "refundType": "https://schema.org/FullRefund",
+            "merchantReturnLink": "https://agensi.io/terms"}
+def skill_price(p):
+    if (p or "").strip().lower() == "free": return "0"
+    return num(p)
 prods = []
 for i in skills:
     o = {"@type": "Offer", "url": i["url"], "priceCurrency": "USD", "availability": "https://schema.org/InStock"}
-    if num(i.get("price")): o["price"] = num(i["price"])
-    prods.append({"@type": "Product", "name": i["title"], "url": i["url"], "description": i.get("short_description", ""),
-                  "category": i.get("category", ""), "brand": {"@type": "Brand", "name": "Cygnix Labs"}, "offers": o})
+    pr = skill_price(i.get("price"))
+    if pr is not None: o["price"] = pr
+    if RETURN_POLICY and pr not in (None, "0"): o["hasMerchantReturnPolicy"] = return_policy()
+    prods.append({"@type": "Product", "name": i["title"], "url": i["url"], "image": PRODUCT_IMAGE, "description": i.get("short_description", ""),
+                  "category": i.get("category", ""), "brand": {"@type": "Organization", "@id": SITE + "/#org", "name": "Cygnix Labs"}, "offers": o})
 itemlist = {"@type": "ItemList", "@id": SITE + "/#tools", "name": "Cygnix Labs SEO and AEO tools",
             "itemListElement": [{"@type": "ListItem", "position": n + 1, "item": x} for n, x in enumerate(apps + prods)]}
 def faqs_of(src):
