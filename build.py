@@ -117,7 +117,7 @@ for i in skills:
     # Google merchant listings need a price > 0, so free skills are marked up as CreativeWork (free offer), not Product.
     kind = "CreativeWork" if pr == "0" else "Product"
     x = {"@type": kind, "name": i["title"], "url": i["url"], "image": PRODUCT_IMAGE, "description": i.get("short_description", "")}
-    if kind == "Product": x.update({"category": i.get("category", ""), "brand": {"@type": "Organization", "@id": SITE + "/#org", "name": "Cygnix Labs"}})
+    if kind == "Product": x.update({"category": i.get("category", ""), "brand": {"@type": "Brand", "name": "Cygnix Labs"}  # GSC 21 Nov: Merchant listings want a Brand object here, not Organization})
     else: x.update({"genre": i.get("category", ""), "publisher": {"@id": SITE + "/#org"}, "isAccessibleForFree": True})
     x["offers"] = o
     prods.append(x)
